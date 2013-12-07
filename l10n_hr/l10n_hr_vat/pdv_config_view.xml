@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_pdv_report_obrazac_tree" model="ir.ui.view">
+            <field name="name">view.pdv.report.obrazac.tree</field>
+            <field name="model">l10n_hr_pdv.report.obrazac</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="PDV obrazac - postavke" toolbar="1">
+                    <field name="position"/>
+                    <field name="tax_code_id"/>
+                    <field name="base_code_id"/>
+                    <field name="base_code_tax_koef"/>
+                    <field name="company_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_pdv_report_obrazac_form" model="ir.ui.view">
+            <field name="name">view.pdv.report.obrazac.form</field>
+            <field name="model">l10n_hr_pdv.report.obrazac</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="PDV obrazac - postavke">
+                    <field name="position"/>
+                    <field name="tax_code_id"/>
+                    <field name="base_code_id"/>
+                    <field name="base_code_tax_koef"/>                                   
+                    <field name="company_id"/>
+                </form>
+            </field>
+        </record>
+        <record id="action_pdv_report_obrazac" model="ir.actions.act_window">
+            <field name="name">PDV obrazac - postavke</field>
+            <field name="res_model">l10n_hr_pdv.report.obrazac</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_pdv_report_obrazac_tree"/>
+        </record>
+        <menuitem action="action_pdv_report_obrazac" 
+        	id="menu_action_pdv_report_obrazac" 
+        	parent="account.next_id_27" 
+        	sequence="30"/>
+
+        <report
+            auto="False"
+            id="report_pdv_obrazac"
+            menu="False"
+            model="account.tax.code"
+            name="pdv.obrazac"
+            rml="l10n_hr_vat/report/pdv_obrazac.rml"
+            string="Obrazac PDV"/>
+            
+        <record id="view_pdv_report_knjiga_stavka_tree" model="ir.ui.view">
+            <field name="name">view.pdv.report.knjiga.stavka.tree</field>
+            <field name="model">l10n_hr_pdv.report.knjiga.stavka</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Knjiga URA/IRA - postavke poreza" toolbar="1">
+                    <field name="tax_code_id"/>
+                    <field name="tax_code_koef"/>                  
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_pdv_report_knjiga_stavka_form" model="ir.ui.view">
+            <field name="name">view.pdv.report.knjiga.stavka.form</field>
+            <field name="model">l10n_hr_pdv.report.knjiga.stavka</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Knjiga URA/IRA - postavke poreza">
+                    <field name="tax_code_id"/>
+                    <field name="tax_code_koef"/>                  
+                </form>
+            </field>
+        </record>
+                  
+        <record id="view_pdv_report_knjiga_tree" model="ir.ui.view">
+            <field name="name">view.pdv.report.knjiga.tree</field>
+            <field name="model">l10n_hr_pdv.report.knjiga</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Knjiga URA/IRA - postavke" toolbar="1">
+                    <field name="knjiga_id"/>
+                    <field name="position"/>
+                    <field name="line_ids"/>                  
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_pdv_report_knjiga_form" model="ir.ui.view">
+            <field name="name">view.pdv.report.knjiga.form</field>
+            <field name="model">l10n_hr_pdv.report.knjiga</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Knjiga URA/IRA - postavke">
+                    <field name="knjiga_id"/>
+                    <field name="position"/>
+                    <field name="line_ids" colspan="4" nolabel="1" widget="one2many_list" mode="tree,form">
+						<form string="Porezi">
+                            <field name="tax_code_id"/>
+                            <field name="tax_code_koef"/>
+						</form>
+                        <tree string="Porezi">
+                            <field name="tax_code_id"/>
+                            <field name="tax_code_koef"/>                                    
+						</tree>                    
+                    </field>
+                </form>
+            </field>
+        </record>
+        <record id="action_pdv_report_knjiga" model="ir.actions.act_window">
+            <field name="name">Knjiga URA/IRA - postavke</field>
+            <field name="res_model">l10n_hr_pdv.report.knjiga</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_pdv_report_knjiga_tree"/>
+        </record>
+        <menuitem action="action_pdv_report_knjiga" 
+        	id="menu_action_pdv_report_knjiga" 
+        	parent="account.next_id_27" 
+        	sequence="31"/>            
+    </data>
+</openerp>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id="view_journal_l10n_hr_pdv_knjiga" model="ir.ui.view">
+            <field name="name">view.journal.l10n.hr.pdv.knjiga</field>
+            <field name="model">account.journal</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="account_tax_payment.view_account_journal_tax_payment"/>
+            <field name="arch" type="xml">
+            	<field name="tax_payment_journal_id" position="before">
+            		<group colspan="6" col="4"> 
+	                	<separator string="Porezne knjige" colspan="4"/>
+	                	<field name="l10n_hr_pdv_knjiga_ids" nolabel="1" groups="account.group_account_manager" height="200"/>
+	                </group>	
+	                <field name="do_not_check_vat"  groups="account.group_account_manager"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>
+
