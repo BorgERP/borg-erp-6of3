@@ -32,5 +32,13 @@ nosetests.xml
 
 # Mr Developer
 .mr.developer.cfg
-.project
-.pydevproject
+=======
+*.pyc
+*.project
+*.pydevproject
+*.pyo
+*.class
+.settings/
+*.odt#
+serverrc
+*.orig
