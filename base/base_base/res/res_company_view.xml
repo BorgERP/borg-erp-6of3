@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="currency_auto_comp">
+            <field name="name">res.company.form.inherit</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Currency update" groups="base.group_extended">
+						<separator string="Currency update service" colspan="4" />
+                        <field name="update_service_id"/> <!--domain="[('company_id','=',active_id)]"-->
+                        <button name="button_refresh_currency"  string="Refresh currencies" type='object' colspan="2"
+                        	 context="{'service_id': update_service_id}" 
+                        	   attrs="{'readonly': [('update_service_id','=',False)]}" />
+                        <field name="service_currency_to_update" colspan="4" nolabel="1" context="{'service_id': update_service_id}" />
+                    </page>
+                </notebook>
+            </field>
+        </record>
+    </data>
+</openerp>
+

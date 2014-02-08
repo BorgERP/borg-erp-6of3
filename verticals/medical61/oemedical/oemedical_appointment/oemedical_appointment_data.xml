@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+         <record model="res.request.link" id="request_link_meeting">
+            <field name="name">Appointment</field>
+            <field name="object">oemedical.appointment</field>
+        </record>
+    </data>
+</openerp>

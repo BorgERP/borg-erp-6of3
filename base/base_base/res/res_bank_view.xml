@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+        <record id="view_currency_res_bank_form" model="ir.ui.view">
+			<field name="name">currency.res.bank.form</field>
+			<field name="model">res.bank</field>
+			<field name="inherit_id" ref="base.view_res_bank_form" />
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<xpath expr="//group/field[@name='state']" position="after">			
+                    <newline/>
+                    <group colspan="2" col="4" groups="base.group_sale_manager">
+                        <separator string="Currency rate update service" colspan="4" />
+                        <field name="update_service_id" colspan="4"/>
+                        <field name="fetch_bid_rate"/>
+                        <field name="fetch_ask_rate"/>
+                    </group>
+				</xpath>				
+			</field>
+		</record>
+
+	</data>
+</openerp>

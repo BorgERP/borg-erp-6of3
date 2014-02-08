@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+	
+		<record id="base.res_currency_rate_type_ask" model="res.currency.rate.type">
+            <!--field name="id">1</field-->
+            <field name="name">Ask rate</field>
+			<field name="code">ask_rate</field>
+		</record>
+
+		<record id="base.res_currency_rate_type_bid" model="res.currency.rate.type">
+            <!--field name="id">2</field-->
+			<field name="name">Bid rate</field>
+			<field name="code">bid_rate</field>
+		</record>
+
+		<record id="base.res_currency_rate_type_middle" model="res.currency.rate.type">
+            <!--field name="id">3</field-->
+			<field name="name">Middle rate</field>
+			<field name="code">middle_rate</field>
+		</record>
+		
+        <record id="base.decimal_currency_rate" model="decimal.precision"> <!-- forcecreate="True"  -->
+            <field name="name">Currency rate</field>
+            <field name="digits" eval="6"/>
+            <field name="display_digits" eval="6"/>
+        </record>
+
+        <record id="base.currency_rate_update_service_manual" model="res.currency.rate.update.service">
+            <field name="name">EUR Manual entry - without automatic update</field>
+            <field name="service">manual</field>
+            <field name="fetch_bid_rate">eval="False"</field>
+            <field name="fetch_ask_rate">eval="False"</field>
+            <field name="auto_currency_up">eval="False"</field>
+            <field name="auto_currency_up">eval="False"</field>
+            <field name="from_currency_id" ref="base.EUR"/>
+        </record>
+
+	</data>
+</openerp>

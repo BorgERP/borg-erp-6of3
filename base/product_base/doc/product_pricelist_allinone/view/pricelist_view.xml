@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+		<record id="product_pricelist_item_tree_view" model="ir.ui.view">
+			<field name="name">product.pricelist.item.tree</field>
+			<field name="model">product.pricelist.item</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Products Listprices Items">
+					<field name="pricelist_name" />
+					<field name="pricelist_type" />
+					<field name="pricelist_cur" />
+					<field name="product_id" />
+					<field name="fixed_price" />
+					<field name="price_version_name" />
+					<field name="price_version_date_start" />
+					<field name="price_version_date_end" />
+					<field name="sequence" />
+					<field name="name" />
+					<field name="product_tmpl_id" />
+					<field name="categ_id" />
+					<field name="min_quantity" />
+					<field name="base" />
+					<field name="price_surcharge" />
+					<field name="price_discount" />
+					<field name="price_round" />
+					<field name="price_min_margin" />
+					<field name="price_max_margin" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="product_pricelist_item_search_view" model="ir.ui.view">
+			<field name="name">product.pricelist.item.search</field>
+			<field name="model">product.pricelist.item</field>
+			<field name="type">search</field>
+			<field name="arch" type="xml">
+				<search string="Products Listprices Items">
+					<group expand="0" string="Pricelist">
+						<field name="pricelist_name" />
+						<field name="pricelist_type" />
+						<field name="pricelist_cur" />
+					</group>
+					<newline />
+					<group expand="0" string="Pricelist Version">
+						<field name="price_version_name" />
+						<field name="price_version_date_start" />
+						<field name="price_version_date_end" />
+					</group>
+					<newline />
+					<group expand="0" string="Pricelist Item">
+						<field name="sequence" />
+						<field name="name" />
+						<field name="product_tmpl_id" />
+						<field name="product_id" />
+						<field name="categ_id" />
+						<field name="min_quantity" />
+						<field name="base" />
+						<field name="price_surcharge" />
+						<field name="price_discount" />
+						<field name="price_round" />
+						<field name="price_min_margin" />
+						<field name="price_max_margin" />
+						<field name="fixed_price" />
+					</group>
+					<newline />
+					<group expand='1' string='Group by...' groups="base.group_extended">
+						<filter string='List' icon="terp-stock_symbol-selection"
+							domain="[]" context="{'group_by' : 'pricelist_idid'}" />
+						<separator orientation="vertical" />
+						<filter string='List Type' icon="terp-stock_symbol-selection"
+							domain="[]" context="{'group_by' : 'pricelist_type'}" />
+						<separator orientation="vertical" />
+						<filter string='List Currency' icon="terp-stock_symbol-selection"
+							domain="[]" context="{'group_by' : 'pricelist_cur'}" />
+						
+						<newline />
+						<filter string='Version' icon="terp-mrp" domain="[]"
+							context="{'group_by' : 'price_version_idid'}" />
+						<separator orientation="vertical" />
+						<filter string='Version Start' icon="terp-mrp" domain="[]"
+							context="{'group_by' : 'price_version_date_start'}" />
+						<separator orientation="vertical" />
+						<filter string='Version End' icon="terp-mrp" domain="[]"
+							context="{'group_by' : 'price_version_date_end'}" />
+
+						<newline />
+						<filter string='Product' icon="terp-mrp" domain="[]"
+							context="{'group_by' : 'product_id'}" />
+						<separator orientation="vertical" />
+						<filter string='Category' icon="terp-mrp" domain="[]"
+							context="{'group_by' : 'categ_id'}" />
+						<separator orientation="vertical" />
+						<filter string='Base' icon="terp-mrp" domain="[]"
+							context="{'group_by' : 'base'}" />
+					</group>
+
+				</search>
+			</field>
+		</record>
+
+		<record id="product_pricelist_megaview_action" model="ir.actions.act_window">
+			<field name="name">Pricelist MegaView</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">product.pricelist.item</field>
+			<field name="view_type">form</field>
+			<field name="view_id" ref="product_pricelist_item_tree_view" />
+		</record>
+		<menuitem action="product_pricelist_megaview_action" id="menu_product_pricelist_megaview_action"
+			parent="product.menu_product_pricelist_main" sequence="2" />
+
+	</data>
+</openerp>

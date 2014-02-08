@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="base.ir_cron_view" model="ir.ui.view">
+            <field name="name">ir.cron.form</field>
+            <field name="model">ir.cron</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Scheduled Actions">
+                    <field name="name"/>
+                    <field name="active"/>
+                    <field name="user_id" />
+                    <field name="priority" />
+                    <notebook colspan="4">
+                    <page string="Information">
+                        <field name="interval_number"/>
+                        <field name="interval_type"/>
+                        <newline/>
+                        <field name="nextcall"/>
+                        <field name="numbercall"/>
+                        <field name="doall"/>
+                        <field name="update_nextcall" readonly="1"/> <!-- from currency rate update -->
+                    </page>
+                    <page string="Technical Data" groups="base.group_extended">
+                        <separator string="Action to Trigger" colspan="4"/>
+                        <field name="model" groups="base.group_extended"/>
+                        <field name="function"/>
+                        <separator string="Arguments" colspan="4"/>
+                        <field colspan="4" name="args" nolabel="1"/>
+                        <button name="run_manually" string="Run now" type="object"/> <!-- from cron_run_manualy -->
+                    </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>

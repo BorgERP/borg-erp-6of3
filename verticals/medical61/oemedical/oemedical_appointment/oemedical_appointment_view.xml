@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record id="view_oemedical_appointment_tree" model="ir.ui.view">
+			<field name="name">oemedical.appointment.tree</field>
+			<field name="model">oemedical.appointment</field>
+			<field name="priority" eval="8" />
+			<field name="arch" type="xml">
+				<tree string="Oemedical Appointment">
+					<field name="name" />
+					<field name="user_id" />
+					<field name="patient_id" />
+					<field name="operational_area" />
+					<field name="product_id" />
+					<field name="date"/>
+					<field name="date_deadline"/>
+					<field name="duration"/>
+					<!--field name="consultations" />
+					<field name="appointment_date" />
+					<field name="doctor_ids" />
+					<field name="appointment_type" />
+					<field name="institution" />
+					<field name="urgency" />
+					<field name="speciality" /-->
+				</tree>
+			</field>
+		</record>
+
+		<record id="view_oemedical_appointment_form" model="ir.ui.view">
+			<field name="name">oemedical.appointment.form</field>
+			<field name="model">oemedical.appointment</field>
+			<field name="type">form</field>
+			<field name="priority" eval="8" />
+			<field name="arch" type="xml">
+				<form string="Oemedical Appointment">
+					<field name="name" />
+					<field name="patient_id" />
+					
+					<field name="user_id" />
+					<field name="date" string="Start Date" required="1"
+                        on_change="onchange_dates(date,duration,False)" />
+                    <field name="duration" widget="float_time"
+                        on_change="onchange_dates(date,duration,False)" />
+                    <field name="date_deadline" string="End Date" required="1"
+                        on_change="onchange_dates(date,False,date_deadline)" />
+                    <field name="operational_area" />
+                    <field name="product_id" />
+					<!--field name="appointment_date" />
+					<field name="appointment_type" />
+					<field name="urgency" />
+					<field name="consultations" />
+					<field name="institution" />
+					<field name="speciality" /-->
+					<newline/>
+					<field name="comments" colspan="4"/>
+					<!--field name="doctor" nolabel="1" colspan="4"/-->
+	                <notebook colspan="4">
+	                
+	                    <page string="Invitation Detail">
+	                        <button string="Invite People"
+	                            name="%(base_calendar.action_view_calendar_invite_attendee_wizard)d"
+	                            icon="terp-partner" type="action"
+	                            context="{'model' : 'oemedical.appointment', 'attendee_field':'attendee_ids'}" colspan="2"/>
+	                        <field name="attendee_ids" colspan="4"
+	                            nolabel="1" widget="one2many" mode="tree,form">
+	                            <tree string="Invitation details" editable="top">
+	                                <field name="sent_by_uid" string="From"/>
+	                                <field name="user_id" string="To"/>
+	                                <field name="email" string="Mail To"/>
+	                                <field name="role" select="1" />
+	                                <field name="state" select="2"/>
+	                                <button name="do_tentative"
+	                                    states="needs-action,declined,accepted"
+	                                    string="Uncertain" type="object"
+	                                    icon="terp-crm" />
+	                                <button name="do_accept" string="Accept"
+	                                    states="needs-action,tentative,declined"
+	                                    type="object" icon="gtk-apply" />
+	                                <button name="do_decline" string="Decline"
+	                                    states="needs-action,tentative,accepted"
+	                                    type="object" icon="gtk-cancel" />
+	                                <button
+	                                    name="%(base_calendar.action_view_calendar_invite_attendee_wizard)d"
+	                                    string="Delegate" type="action"
+	                                    icon="gtk-sort-descending"
+	                                    states="needs-action,tentative,declined,accepted"
+	                                    context="{'model' : 'calendar.attendee', 'attendee_field' : 'child_ids'}" />
+	                            </tree>
+	                            <form string="Invitation details">
+	                                <notebook colspan="4">
+	                                    <page string="Details">
+	                                        <field name="email" />
+	                                        <field name="rsvp" select="1" />
+	                                        <field name="cutype" select="1" />
+	                                        <field name="role" select="1" />
+	                                        <separator colspan="4" string="" />
+	                                        <group col="6" colspan="4">
+	                                            <field name="state" />
+	                                            <button name="do_tentative"
+	                                                states="needs-action,declined,accepted"
+	                                                string="Uncertain"
+	                                                type="object"
+	                                                icon="terp-crm" />
+	                                            <button name="do_accept"
+	                                                string="Accept"
+	                                                states="needs-action,tentative,declined"
+	                                                type="object"
+	                                                icon="gtk-apply" />
+	                                            <button name="do_decline"
+	                                                string="Decline"
+	                                                states="needs-action,tentative,accepted"
+	                                                type="object"
+	                                                icon="gtk-cancel" />
+	                                            <button
+	                                                name="%(base_calendar.action_view_calendar_invite_attendee_wizard)d"
+	                                                string="Delegate"
+	                                                type="action"
+	                                                icon="gtk-sort-descending"
+	                                                states="needs-action,tentative,declined,accepted"
+	                                                context="{'model' : 'calendar.attendee', 'attendee_field' : 'child_ids'}" />
+	                                        </group>
+	                                    </page>
+	                                    <page string="Other">
+	                                        <field name="user_id"/>
+	                                        <field name="partner_address_id" select="1" />
+	                                        <newline />
+	                                    </page>
+	                                </notebook>
+	                            </form>
+	                        </field>
+	                    </page>
+	                </notebook>
+                	<group col="8" colspan="4" groups="base.group_extended">
+                        <field name="state" select="2" />
+                               <button name="do_cancel"
+                                   string="Cancel"
+                                   states="confirmed"
+                                   type="object"
+                                   icon="gtk-cancel" />
+                               <!--button name="do_tentative"
+                                   states="confirmed,cancelled"
+                                   string="Uncertain"
+                                   type="object"
+                                   icon="terp-crm" /-->
+                               <button name="do_confirm"
+                                   string="Confirm"
+                                   states="draft,cancelled"
+                                   type="object"
+                                   icon="gtk-apply" />
+                    </group>
+				</form>
+			</field>
+		</record>
+		
+		<record model="ir.ui.view" id="oemedical_appointment_calendar_view">
+        <field name="name">Appointments calendar</field>
+        <field name="model">oemedical.appointment</field>
+        <field name="type">calendar</field>
+        <field name="priority" eval="2"/>
+        <field name="arch" type="xml">
+            <calendar string="Appointments" date_start="date" color="user_id" date_stop="date_deadline" date_delay="duration">
+                <field name="patient_id"/>
+                <field name="operational_area"/>
+                <field name="product_id" />
+            </calendar>
+        </field>
+    </record>
+
+		<record id="view_oemedical_appointment_search" model="ir.ui.view">
+			<field name="name">oemedical.appointment.search</field>
+			<field name="model">oemedical.appointment</field>
+			<field name="type">search</field>
+			<field name="priority" eval="8" />
+			<field name="arch" type="xml">
+				<search string="Oemedical Appointment">
+					<field name="patient_id" />
+					<field name="user_id" />
+					<field name="operational_area"/>
+					<field name="product_id" />
+					<field name="date"/>
+					<!--field name="name" />
+					<field name="doctor" />
+					<field name="appointment_date" />
+					<field name="appointment_type" />
+					<field name="urgency" />
+					<field name="consultations" />
+					<field name="institution" />
+					<field name="speciality" /-->
+					<newline />
+					<group expand="0" string="Group By...">
+						<filter string="Consultation Services" domain="[]"
+							context="{'group_by':'consultations'}" />
+						<filter string="Patient" domain="[]" context="{'group_by':'patient_id'}" />
+						<filter string="Appointment ID" domain="[]"
+							context="{'group_by':'name'}" />
+						<filter string="Date and Time" domain="[]"
+							context="{'group_by':'appointment_date'}" />
+						<filter string="Physician" domain="[]" context="{'group_by':'doctor'}" />
+						<filter string="Comments" domain="[]" context="{'group_by':'comments'}" />
+						<filter string="Health Center" domain="[]"
+							context="{'group_by':'institution'}" />
+						<filter string="Specialty" domain="[]"
+							context="{'group_by':'speciality'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+		
+		<record model="ir.actions.act_window" id="act_open_oemedical_appointment_view">
+			<field name="name">Appointment</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">oemedical.appointment</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form,calendar</field>
+			<field name="search_view_id" ref="view_oemedical_appointment_search" />
+			<field name="domain">[]</field>
+			<field name="context">{}</field>
+		</record>
+
+		<record model="ir.actions.act_window.view" id="act_open_oemedical_appointment_view_form">
+			<field name="act_window_id" ref="act_open_oemedical_appointment_view" />
+			<field name="sequence" eval="20" />
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="view_oemedical_appointment_form" />
+		</record>
+
+		<record model="ir.actions.act_window.view" id="act_open_oemedical_appointment_view_tree">
+			<field name="act_window_id" ref="act_open_oemedical_appointment_view" />
+			<field name="sequence" eval="10" />
+			<field name="view_mode">tree</field>
+			<field name="view_id" ref="view_oemedical_appointment_tree" />
+		</record>
+
+	</data>
+</openerp>

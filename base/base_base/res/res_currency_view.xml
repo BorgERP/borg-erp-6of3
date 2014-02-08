@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+<!--
+    Currency
+-->
+        <record id="base.view_currency_search" model="ir.ui.view">
+            <field name="name">res.currency.search</field>
+            <field name="model">res.currency</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Currencies">
+                    <group>
+                        <filter name="rate_type_bid" icon="gtk-apply" string="Bid rate" context="{'currency_rate_type_code': 'bid_rate'}" help="Bid currency rate type"/>                   
+                        <!--filter name="rate_type_middle" icon="gtk-apply" string="Middle rate" context="{'currency_rate_type_code': 'middle_rate'}" help="Middle currency rate type"/-->                  
+                        <filter name="rate_type_ask" icon="gtk-apply" string="Ask rate" context="{'currency_rate_type_code': 'ask_rate'}" help="Ask currency rate type"/>                   
+                    </group>
+                    <field name="name"/>
+                    <field name="active"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="base.view_currency_tree" model="ir.ui.view">
+            <field name="name">res.currency.tree</field>
+            <field name="model">res.currency</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Currencies">
+                    <field name="date"/>
+                    <field name="ratio"/>
+                    <field name="name"/>
+                    <field name="rate_inv" />
+                    <field name="rate" />
+                    <field name="company_id" invisible="1" groups="base.group_compatibility_deprec"/>
+                     <field name="rate_ids" invisible="1"/>
+                    <!--v8field name="rate_silent"/-->
+                    <field name="rounding"/>
+                    <field name="accuracy"/>
+                    <field name="position"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record id="base.view_currency_form" model="ir.ui.view">
+            <field name="name">res.currency.form</field>
+            <field name="model">res.currency</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Currency">
+                    <group colspan="4" col="20">
+                        <field name="name" colspan="8"/>
+                        <!--v8 field name="rate_silent"/-->
+                        <field name="company_id" invisible="1" groups="base.group_compatibility_deprec" colspan="6"/>
+                        <field name="base" invisible="1" groups="base.group_compatibility_deprec"/>
+                        <field name="active"/>
+                        <group colspan="6" col="4">
+                            <field name="ratio"/>
+                            <field name="rate"/>
+                        </group>
+                    </group>
+                    <group colspan="4" col="8">
+                        <group string="Price Accuracy" colspan="4" col="2">
+                            <field name="rounding"/>
+                            <field name="accuracy"/>
+                        </group>
+                        <group string="Display" colspan="4" col="2">
+                            <field name="symbol"/>
+                            <field name="position"/>
+                        </group>
+                    </group>
+                    <newline/>
+                    <field colspan="4" mode="tree,form" name="rate_ids" nolabel="1" attrs="{'readonly':[('base','=',True)]}">
+                        <tree string="Rates" editable="bottom">
+                            <field name="name"/>
+                            <field name="ratio"/>
+                            <field name="rate"/>
+                            <field name="rate_inv"/>
+                        </tree>
+                        <form string="Rates">
+                            <group colspan="4" col="20">
+                                <field name="name" colspan="12"/>
+                                <field name="ratio" colspan="4"/>
+                                <field name="rate" colspan="4"/>
+                                <field name="rate_inv"/>
+                            </group>
+                        </form>
+                    </field>
+                </form>
+            </field>
+        </record>
+
+        <record id="base.action_currency_form" model="ir.actions.act_window">
+            <field name="context">{'search_default_rate_type_middle': 1}</field>
+        </record>
+
+
+<!-- 
+    Currency Rate Type
+-->
+        <record id="base.view_currency_rate_type_form" model="ir.ui.view">
+            <field name="name">res.currency.rate.type.form</field>
+            <field name="model">res.currency.rate.type</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <form string="Currency Rate Type">
+                    <field name="name"/>
+                    <field name="code" />
+                </form>
+            </field>
+        </record>
+
+        <record id="base.action_currency_rate_type_form" model="ir.actions.act_window">
+            <field name="name">Currency Rate Type</field>
+            <field name="res_model">res.currency.rate.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="base.view_currency_rate_type_search" model="ir.ui.view">
+            <field name="name">res.currency.rate.type.search</field>
+            <field name="model">res.currency.rate.type</field>
+            <field name="arch" type="xml">
+                <search string="Currency Rate Type">
+                    <field name="name" string="Name"/>
+                    <field name="code" string="Code"/>
+                </search>
+            </field>
+        </record>
+
+<!-- 
+    Currency rate
+-->
+        <record id="base.view_currency_rate_tree" model="ir.ui.view">
+            <field name="name">res.currency.rate.tree</field>
+            <field name="model">res.currency.rate</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+            	<tree string="Currency Rate">
+					<field name="name" />
+					<field name="currency_rate_type_id" />
+					<field name="ratio" />
+                    <field name="from_currency_id" />
+                    <field name="rate" />
+					<field name="rate_inv" />
+                    <field name="currency_id" />
+            	</tree>
+            </field>
+        </record>
+
+        <record id="view_currency_rate_service_update_form" model="ir.ui.view">
+            <field name="name">res.currency.rate.form</field>
+            <field name="model">res.currency.rate</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            	<form string="Currency Rate">
+					<field name="name" />
+					<field name="currency_rate_type_id" />
+					<field name="ratio" />
+                    <field name="from_currency_id" />
+					<field name="rate" />
+					<field name="rate_inv" />
+                    <field name="currency_id" />
+            	</form>
+            </field>
+        </record>
+
+
+        <menuitem id="base.menu_currency_sys" name="Currencies" icon="terp-administration"  
+                  parent="base.menu_config" sequence="50" />
+        <menuitem id="base.menu_action_currency_form_sys" action="base.action_currency_form" 
+                  parent="base.menu_currency_sys" sequence="3" groups="base.group_system"/>
+
+	</data>
+</openerp>

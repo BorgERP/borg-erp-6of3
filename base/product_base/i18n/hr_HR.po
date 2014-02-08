@@ -1,0 +1,162 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* product_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-27 12:16+0000\n"
+"PO-Revision-Date: 2013-12-27 13:41+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: product_base
+#: field:product.uom.alternative,factor:0
+msgid "Ratio"
+msgstr "Omjer"
+
+#. module: product_base
+#: model:ir.model,name:product_base.model_product_uom
+msgid "Product Unit of Measure"
+msgstr "Jedinica mjere proizvoda"
+
+#. module: product_base
+#: help:product.template,uom_so_id:0
+msgid "Default Unit of Measure used for sales orders."
+msgstr "Zadana jedinica mjere korištena na prodajnim nalozima."
+
+#. module: product_base
+#: field:product.template,uom_so_id:0
+msgid "Sales Unit of Measure"
+msgstr "Prodajna jedinica mjere"
+
+#. module: product_base
+#: model:ir.actions.act_window,help:product_base.product_uom_alternative_form_action
+msgid "Create and manage the alternative units of measure you want to be used in your system."
+msgstr "Kreiranje i upravljanje alternativnim mjernim jedinicama koje želite koristiti u sustavu."
+
+#. module: product_base
+#: field:product.uom.alternative,rounding:0
+msgid "Rounding Precision"
+msgstr "Preciznost zaokruživanja"
+
+#. module: product_base
+#: view:product.uom.alternative:0
+msgid "Unit of Measure Properties"
+msgstr "Svojstva jedinice mjere"
+
+#. module: product_base
+#: field:product.mixin,unit_qty:0
+msgid "Unit Quantity"
+msgstr "Jedinica količine"
+
+#. module: product_base
+#: model:ir.model,name:product_base.model_product_product
+#: field:product.uom.alternative,product_id:0
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: product_base
+#: help:product.uom.alternative,rounding:0
+msgid "The computed quantity will be a multiple of this value. Use 1.0 for a Unit of Measure that cannot be further split, such as a piece."
+msgstr "Izračunata količina će biti višekratnik ove vrijednosti. Upišite 1.0 za jedinicu mjere koja se ne može dalje dijeliti, kao što je naprimjer \"komad\"."
+
+#. module: product_base
+#: field:product.mixin,qty_per_uom:0
+msgid "Quantity per UOM"
+msgstr "Količina po JM"
+
+#. module: product_base
+#: help:product.uom.alternative,active:0
+msgid "By unchecking the active field you can disable a unit of measure without deleting it."
+msgstr "Micanjem kvačice sa polja \"Aktivna\" možete onemogućiti odabranu jedinicu mjere bez da je brišete."
+
+#. module: product_base
+#: field:product.uom.alternative,active:0
+msgid "Active"
+msgstr "Aktivna"
+
+#. module: product_base
+#: help:product.uom.alternative,factor_inv:0
+msgid ""
+"How many times this Unit of Measure is bigger than the reference Unit of Measure in this category:\n"
+"1 * (this unit) = ratio * (reference unit)"
+msgstr ""
+"Koliko puta je ovaj jedinica mjere veća od referentne jedinice mjere:\n"
+"1 * (ova jedinica) = omjer * (referentna jedinica)"
+
+#. module: product_base
+#: sql_constraint:product.uom:0
+msgid "The conversion ratio for a unit of measure cannot be 0!"
+msgstr "Koeficijent pretvorbe ne smije biti 0!"
+
+#. module: product_base
+#: constraint:product.template:0
+msgid "Error: The default UOM and the purchase UOM must be in the same category."
+msgstr "Greška: Zadana jedinica mjere i jedinica mjere nabave mora biti u istoj kategoriji."
+
+#. module: product_base
+#: model:ir.model,name:product_base.model_product_mixin
+msgid "product.mixin"
+msgstr "product.mixin"
+
+#. module: product_base
+#: selection:product.uom.alternative,mes_type:0
+msgid "Variable"
+msgstr "Varijabilan"
+
+#. module: product_base
+#: model:ir.model,name:product_base.model_product_template
+msgid "Product Template"
+msgstr "Predložak proizvoda"
+
+#. module: product_base
+#: field:product.uom,product_ids:0
+msgid "Products"
+msgstr "Proizvodi"
+
+#. module: product_base
+#: selection:product.uom.alternative,mes_type:0
+msgid "Fixed"
+msgstr "Fiksan"
+
+#. module: product_base
+#: model:ir.actions.act_window,name:product_base.product_uom_alternative_form_action
+#: model:ir.model,name:product_base.model_product_uom_alternative
+#: model:ir.ui.menu,name:product_base.menu_product_uom_alternative_action
+#: model:ir.ui.menu,name:product_base.menu_purchase_uom_alternative_action
+#: model:ir.ui.menu,name:product_base.menu_stock_uom_alternative_action
+#: field:product.template,uom_alternative_ids:0
+#: view:product.uom.alternative:0
+msgid "Alternative Units of Measure"
+msgstr "Alternativne jedinice mjere"
+
+#. module: product_base
+#: field:product.uom.alternative,mes_type:0
+msgid "Measure Type"
+msgstr "Tip mjere"
+
+#. module: product_base
+#: constraint:product.product:0
+msgid "Error: Invalid ean code"
+msgstr "Pogreška: Nevažeća EAN šifra !"
+
+#. module: product_base
+#: field:product.uom.alternative,factor_inv:0
+msgid "Bigger Ratio"
+msgstr "Veći omjer"
+
+#. module: product_base
+#: help:product.uom.alternative,factor:0
+msgid ""
+"How much bigger or smaller this unit is compared to the reference Unit of Measure for this category:\n"
+"1 * (reference unit) = ratio * (this unit)"
+msgstr ""
+"Koliko je ova jedinica veća ili manja u odnosu na referentnu jedinicu mjere u ovoj kategoriji:\n"
+"1 * (referentna jedinica) = omjer * (ova jedinica)"
+

@@ -1,0 +1,2979 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data> <!--noupdate="0"-->
+        <!-- The Following currency rates are considered as on 1st Jan,2010 against EUR. -->
+        <!-- Currencies -->
+        <record id="base.USD" model="res.currency">
+            <field name="name">USD</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+            <field name="position">before</field>
+        </record>
+        <record id="base.rateUSD" model="res.currency.rate">
+            <field name="rate">1.2834</field>
+            <field name="currency_id" ref="base.USD"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <!-- VEF was previously VEB -->
+        <record id="base.VEF" model="res.currency">
+            <field name="name">VEF</field>
+            <field name="symbol">Bs.F</field>
+            <field name="rounding">0.0001</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateVEF" model="res.currency.rate">
+            <field name="rate">5.864</field>
+            <field name="currency_id" ref="base.VEF"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.CAD" model="res.currency">
+            <field name="name">CAD</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateCAD" model="res.currency.rate">
+            <field name="rate">1.3388</field>
+            <field name="currency_id" ref="base.CAD"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.CHF" model="res.currency">
+            <field name="name">CHF</field>
+            <field name="symbol">CHF</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateCHF" model="res.currency.rate">
+            <field name="rate">1.3086</field>
+            <field name="currency_id" ref="base.CHF"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.BRL" model="res.currency">
+            <field name="name">BRL</field>
+            <field name="symbol">R$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateBRL" model="res.currency.rate">
+            <field name="rate">2.2344</field>
+            <field name="currency_id" ref="base.BRL"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.CNY" model="res.currency">
+            <field name="name">CNY</field>
+            <field name="symbol">¥</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateCNY" model="res.currency.rate">
+            <field name="rate">8.7556</field>
+            <field name="currency_id" ref="base.CNY"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.COP" model="res.currency">
+            <field name="name">COP</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateCOP" model="res.currency.rate">
+            <field name="rate">2933.8378</field>
+            <field name="currency_id" ref="base.COP"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.CZK" model="res.currency">
+            <field name="name">CZK</field>
+            <field name="symbol">Kč</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateCZK" model="res.currency.rate">
+            <field name="rate">26.5634</field>
+            <field name="currency_id" ref="base.CZK"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.DKK" model="res.currency">
+            <field name="name">DKK</field>
+            <field name="symbol">kr</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateDKK" model="res.currency.rate">
+            <field name="rate">7.4445</field>
+            <field name="currency_id" ref="base.DKK"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.HUF" model="res.currency">
+            <field name="name">HUF</field>
+            <field name="symbol">Ft</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateHUF" model="res.currency.rate">
+            <field name="rate">271.5621</field>
+            <field name="currency_id" ref="base.HUF"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.IDR" model="res.currency">
+            <field name="name">IDR</field>
+            <field name="symbol">Rp</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateIDR1" model="res.currency.rate">
+            <field name="rate">14352.00</field>
+            <field name="currency_id" ref="base.IDR"/>
+            <field eval="time.strftime('2009-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            
+        </record>
+        <record id="base.rateIDR" model="res.currency.rate">
+            <field name="rate">11796.39</field>
+            <field name="currency_id" ref="base.IDR"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.LVL" model="res.currency">
+            <field name="name">LVL</field>
+            <field name="symbol">Ls</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateLVL" model="res.currency.rate">
+            <field name="rate">0.7086</field>
+            <field name="currency_id" ref="base.LVL"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.NOK" model="res.currency">
+            <field name="name">NOK</field>
+            <field name="symbol">kr</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateNOK" model="res.currency.rate">
+            <field name="rate">7.8668</field>
+            <field name="currency_id" ref="base.NOK"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.XPF" model="res.currency">
+            <field name="name">XPF</field>
+            <field name="symbol">XPF</field>
+            <field name="rounding">1.00</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateXPF" model="res.currency.rate">
+            <field name="rate">119.331742</field>
+            <field name="currency_id" ref="base.XPF"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.PAB" model="res.currency">
+            <field name="name">PAB</field>
+            <field name="symbol">B/.</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.ratePAB" model="res.currency.rate">
+            <field name="rate">1.2676</field>
+            <field name="currency_id" ref="base.PAB"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.PLN" model="res.currency">
+            <field name="name">PLN</field>
+            <field name="symbol">zł</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.ratePLN" model="res.currency.rate">
+            <field name="rate">4.1005</field>
+            <field name="currency_id" ref="base.PLN"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.SEK" model="res.currency">
+            <field name="name">SEK</field>
+            <field name="symbol">kr</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateSEK" model="res.currency.rate">
+            <field name="rate">10.3004</field>
+            <field name="currency_id" ref="base.SEK"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.ARS" model="res.currency">
+            <field name="name">ARS</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateARS" model="res.currency.rate">
+            <field name="rate">5.0881</field>
+            <field name="currency_id" ref="base.ARS"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.INR" model="res.currency">
+            <field name="name">INR</field>
+            <field name="symbol">₹</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateINR" model="res.currency.rate">
+            <field name="rate">59.9739</field>
+            <field name="currency_id" ref="base.INR"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.AUD" model="res.currency">
+            <field name="name">AUD</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateAUD" model="res.currency.rate">
+            <field name="rate">1.4070</field>
+            <field name="currency_id" ref="base.AUD"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.UAH" model="res.currency">
+            <field name="name">UAH</field>
+            <field name="symbol">₴</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateUAH" model="res.currency.rate">
+            <field name="rate">10.1969</field>
+            <field name="currency_id" ref="base.UAH"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.VND" model="res.currency">
+            <field name="name">VND</field>
+            <field name="symbol">₫</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateVND" model="res.currency.rate">
+            <field name="rate">26330.01</field>
+            <field name="currency_id" ref="base.VND"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.HKD" model="res.currency">
+            <field name="name">HKD</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateHKD" model="res.currency.rate">
+            <field name="rate">11.1608</field>
+            <field name="currency_id" ref="base.HKD"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.JPY" model="res.currency">
+            <field name="name">JPY</field>
+            <field name="symbol">¥</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateJPY" model="res.currency.rate">
+            <field name="rate">133.62</field>
+            <field name="currency_id" ref="base.JPY"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.BGN" model="res.currency">
+            <field name="name">BGN</field>
+            <field name="symbol">лв</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateBGN" model="res.currency.rate">
+            <field name="rate">1.9558</field>
+            <field name="currency_id" ref="base.BGN"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.LTL" model="res.currency">
+            <field name="name">LTL</field>
+            <field name="symbol">Lt</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateLTL" model="res.currency.rate">
+            <field name="rate">3.4528</field>
+            <field name="currency_id" ref="base.LTL"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.RON" model="res.currency">
+            <field name="name">RON</field>
+            <field name="symbol">lei</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateRON" model="res.currency.rate">
+            <field name="rate">4.2253</field>
+            <field name="currency_id" ref="base.RON"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.HRK" model="res.currency">
+            <field name="name">HRK</field>
+            <field name="symbol">kn</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateHRK" model="res.currency.rate">
+            <field name="rate">7.2936</field>
+            <field name="currency_id" ref="base.HRK"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.RUB" model="res.currency">
+            <field name="name">RUB</field>
+            <field name="symbol">руб</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateRUB" model="res.currency.rate">
+            <field name="rate">43.16</field>
+            <field name="currency_id" ref="base.RUB"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.TRY" model="res.currency">
+            <field name="name">TRY</field>
+            <field name="symbol">TL</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateTRY" model="res.currency.rate">
+            <field name="rate">2.1411</field>
+            <field name="currency_id" ref="base.TRY"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.KRW" model="res.currency">
+            <field name="name">KRW</field>
+            <field name="symbol">₩</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateKRW" model="res.currency.rate">
+            <field name="rate">1662.37</field>
+            <field name="currency_id" ref="base.KRW"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.MXN" model="res.currency">
+            <field name="name">MXN</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateMXN" model="res.currency.rate">
+            <field name="rate">18.6664</field>
+            <field name="currency_id" ref="base.MXN"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.MYR" model="res.currency">
+            <field name="name">MYR</field>
+            <field name="symbol">RM</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateMYR" model="res.currency.rate">
+            <field name="rate">4.8887</field>
+            <field name="currency_id" ref="base.MYR"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.NZD" model="res.currency">
+            <field name="name">NZD</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateNZD" model="res.currency.rate">
+            <field name="rate">1.9764</field>
+            <field name="currency_id" ref="base.NZD"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.PHP" model="res.currency">
+            <field name="name">PHP</field>
+            <field name="symbol">Php</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.ratePHP" model="res.currency.rate">
+            <field name="rate">66.1</field>
+            <field name="currency_id" ref="base.PHP"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.SGD" model="res.currency">
+            <field name="name">SGD</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateSGD" model="res.currency.rate">
+            <field name="rate">2.0126</field>
+            <field name="currency_id" ref="base.SGD"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.ZAR" model="res.currency">
+            <field name="name">ZAR</field>
+            <field name="symbol">R</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateZAR" model="res.currency.rate">
+            <field name="rate">10.5618</field>
+            <field name="currency_id" ref="base.ZAR"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.res_bank_1" model="res.bank">
+            <field name="name">Reserve</field>
+        </record>
+
+        <record id="base.CRC" model="res.currency">
+            <field name="name">CRC</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+            <field name="symbol">¢</field>
+        </record>
+        <record id="base.rateCRC" model="res.currency.rate">
+           <field name="rate">691.3153</field>
+           <field name="currency_id" ref="base.CRC"/>
+           <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.MUR" model="res.currency">
+            <field name="name">MUR</field>
+            <field name="symbol">Rs</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateMUR" model="res.currency.rate">
+            <field name="rate">40.28</field>
+            <field name="currency_id" ref="base.MUR"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.XOF" model="res.currency">
+            <field name="name">XOF</field>
+            <field name="symbol">CFA</field>
+            <field name="rounding">1</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateXOF" model="res.currency.rate">
+           <field name="rate">655.957</field>
+           <field name="currency_id" ref="base.XOF"/>
+           <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+       </record>
+
+        <record id="base.XAF" model="res.currency">
+            <field name="name">XAF</field>
+            <field name="symbol">FCFA</field>
+            <field name="rounding">1</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateXAF" model="res.currency.rate">
+           <field name="rate">655.957</field>
+           <field name="currency_id" ref="base.XAF"/>
+           <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+       </record>
+
+        <record id="base.UGX" model="res.currency">
+            <field name="name">UGX</field>
+            <field name="symbol">USh</field>
+            <field name="rounding">1</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateUGX" model="res.currency.rate">
+            <field name="rate">3401.91388</field>
+            <field name="currency_id" ref="base.UGX"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.HNL" model="res.currency">
+            <field name="name">HNL</field>
+            <field name="symbol">L</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateHNL" model="res.currency.rate">
+            <field name="rate">25</field>
+            <field name="currency_id" ref="base.HNL"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.CLP" model="res.currency">
+            <field name="name">CLP</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateCLP" model="res.currency.rate">
+            <field name="rate">710</field>
+            <field name="currency_id" ref="base.CLP"/>
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+        </record>
+
+        <record id="base.UYU" model="res.currency">
+            <field name="name">UYU</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateUYU" model="res.currency.rate">
+            <field name="currency_id" ref="base.UYU" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">28.36</field>
+        </record>
+
+        <record id="base.AFN" model="res.currency">
+            <field name="name">AFN</field>
+            <field name="symbol">Afs</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateAFN" model="res.currency.rate">
+            <field name="currency_id" ref="base.AFN" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">59.33</field>
+        </record>
+
+        <record id="base.AOA" model="res.currency">
+            <field name="name">AOA</field>
+            <field name="symbol">Kz</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateAOA" model="res.currency.rate">
+            <field name="currency_id" ref="base.AOA" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">117.080</field>
+        </record>
+
+        <record id="base.XCD" model="res.currency">
+            <field name="name">XCD</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateXCD" model="res.currency.rate">
+            <field name="currency_id" ref="base.XCD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">3.32</field>
+        </record>
+        
+        <record id="base.AMD" model="res.currency">
+            <field name="name">AMD</field>
+            <field name="symbol">դր.</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateAMD" model="res.currency.rate">
+            <field name="currency_id" ref="base.AMD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">506.02</field>
+        </record>
+        
+        <record id="base.AWG" model="res.currency">
+            <field name="name">AWG</field>
+            <field name="symbol">Afl.</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateAWG" model="res.currency.rate">
+            <field name="currency_id" ref="base.AWG" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">0.45</field>
+        </record>
+        
+        <record id="base.AZN" model="res.currency">
+            <field name="name">AZN</field>
+            <field name="symbol">m</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateAZN" model="res.currency.rate">
+            <field name="currency_id" ref="base.AZN" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">0.96</field>
+        </record>
+        
+        <record id="base.BSD" model="res.currency">
+            <field name="name">BSD</field>
+            <field name="symbol">B$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateBSD" model="res.currency.rate">
+            <field name="currency_id" ref="base.BSD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1.23</field>
+        </record>
+        
+        <record id="base.BHD" model="res.currency">
+            <field name="name">BHD</field>
+            <field name="symbol">BD</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateBHD" model="res.currency.rate">
+            <field name="currency_id" ref="base.BHD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">0.46</field>
+        </record>
+        
+        <record id="base.BDT" model="res.currency">
+            <field name="name">BDT</field>
+            <field name="symbol">৳</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateBDT" model="res.currency.rate">
+            <field name="currency_id" ref="base.BDT" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">100.59</field>
+        </record>
+        
+        <record id="base.BBD" model="res.currency">
+            <field name="name">BBD</field>
+            <field name="symbol">Bds$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateBBD" model="res.currency.rate">
+            <field name="currency_id" ref="base.BBD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">2.46</field>
+        </record>
+        
+        <record id="base.BYR" model="res.currency">
+            <field name="name">BYR</field>
+            <field name="symbol">BR</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateBYR" model="res.currency.rate">
+            <field name="currency_id" ref="base.BYR" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">10228.19</field>
+        </record>
+        
+        <record id="base.BZD" model="res.currency">
+            <field name="name">BZD</field>
+            <field name="symbol">BZ$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateBZD" model="res.currency.rate">
+            <field name="currency_id" ref="base.BZD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">2.33</field>
+        </record>
+        
+        <record id="base.BMD" model="res.currency">
+            <field name="name">BMD</field>
+            <field name="symbol">BD$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateBMD" model="res.currency.rate">
+            <field name="currency_id" ref="base.BMD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1.23</field>
+        </record>
+        
+        <record id="base.BTN" model="res.currency">
+            <field name="name">BTN</field>
+            <field name="symbol">Nu.</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateBTN" model="res.currency.rate">
+            <field name="currency_id" ref="base.BTN" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate"> 67.81</field>
+        </record>
+        
+        <record id="base.BOB" model="res.currency">
+            <field name="name">BOB</field>
+            <field name="symbol">Bs.</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateBOB" model="res.currency.rate">
+            <field name="currency_id" ref="base.BOB" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">8.50</field>
+        </record>
+        
+        <record id="base.BAM" model="res.currency">
+            <field name="name">BAM</field>
+            <field name="symbol">KM</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateBAM" model="res.currency.rate">
+            <field name="currency_id" ref="base.BAM" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1.96</field>
+        </record>
+        
+        <record id="base.BWP" model="res.currency">
+            <field name="name">BWP</field>
+            <field name="symbol">P</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateBWP" model="res.currency.rate">
+            <field name="currency_id" ref="base.BWP" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">9.45</field>
+        </record>
+        
+        <record id="base.BIF" model="res.currency">
+            <field name="name">BIF</field>
+            <field name="symbol">FBu</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateBIF" model="res.currency.rate">
+            <field name="currency_id" ref="base.BIF" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1736.73</field>
+        </record>
+        
+        <record id="base.KHR" model="res.currency">
+            <field name="name">KHR</field>
+            <field name="symbol">៛</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateKHR" model="res.currency.rate">
+            <field name="currency_id" ref="base.KHR" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">5054.53</field>
+        </record>
+        
+        <record id="base.KYD" model="res.currency">
+            <field name="name">KYD</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateKYD" model="res.currency.rate">
+            <field name="currency_id" ref="base.KYD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1.007</field>
+        </record>
+        
+        <record id="base.KMF" model="res.currency">
+            <field name="name">KMF</field>
+            <field name="symbol">CF</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateKMF" model="res.currency.rate">
+            <field name="currency_id" ref="base.KMF" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">492.23</field>
+        </record>
+        
+        <record id="base.CDF" model="res.currency">
+            <field name="name">CDF</field>
+            <field name="symbol">Fr</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateCDF" model="res.currency.rate">
+            <field name="currency_id" ref="base.CDF" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1112.80</field>
+        </record>
+        
+        <record id="base.CUP" model="res.currency">
+            <field name="name">CUP</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateCUP" model="res.currency.rate">
+            <field name="currency_id" ref="base.CUP" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1.226</field>
+        </record>
+        
+        <record id="base.ANG" model="res.currency">
+            <field name="name">ANG</field>
+            <field name="symbol">ƒ</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateANG" model="res.currency.rate">
+            <field name="currency_id" ref="base.ANG" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">2.11</field>
+        </record>
+        
+        <record id="base.CYP" model="res.currency">
+            <field name="name">CYP</field>
+            <field name="symbol">£</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateCYP" model="res.currency.rate">
+            <field name="currency_id" ref="base.CYP" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">0.475</field>
+        </record>
+        
+        <record id="base.DJF" model="res.currency">
+            <field name="name">DJF</field>
+            <field name="symbol">Fdj</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateDJF" model="res.currency.rate">
+            <field name="currency_id" ref="base.DJF" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">222.22</field>
+        </record>
+        
+        <record id="base.DOP" model="res.currency">
+            <field name="name">DOP</field>
+            <field name="symbol">RD$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateDOP" model="res.currency.rate">
+            <field name="currency_id" ref="base.DOP" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">48.09</field>
+        </record>
+        
+		<!-- East Timor -->
+        <record id="base.TPE" model="res.currency">
+            <field name="name">TPE</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateTPE" model="res.currency.rate">
+            <field name="currency_id" ref="base.TPE" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1.2535</field>
+        </record>
+        
+        <record id="base.ECS" model="res.currency">
+            <field name="name">ECS</field>
+            <field name="symbol">S/.</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateECS" model="res.currency.rate">
+            <field name="currency_id" ref="base.ECS" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">30707.5</field>
+        </record>
+        
+        <record id="base.EGP" model="res.currency">
+            <field name="name">EGP</field>
+            <field name="symbol">E£</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateEGP" model="res.currency.rate">
+            <field name="currency_id" ref="base.EGP" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">7.46</field>
+        </record>
+        
+        <record id="base.SVC" model="res.currency">
+            <field name="name">SVC</field>
+            <field name="symbol">¢</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateSVC" model="res.currency.rate">
+            <field name="currency_id" ref="base.SVC" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">10.74</field>
+        </record>
+        
+        <record id="base.ERN" model="res.currency">
+            <field name="name">ERN</field>
+            <field name="symbol">Nfk</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateERN" model="res.currency.rate">
+            <field name="currency_id" ref="base.ERN" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">18.89</field>
+        </record>
+        
+        <record id="base.ETB" model="res.currency">
+            <field name="name">ETB</field>
+            <field name="symbol">Br</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateEEB" model="res.currency.rate">
+            <field name="currency_id" ref="base.ETB" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">21.94</field>
+        </record>
+        
+        <record id="base.FKP" model="res.currency">
+            <field name="name">FKP</field>
+            <field name="symbol">£</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateFKP" model="res.currency.rate">
+            <field name="currency_id" ref="base.FKP" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">0.78</field>
+        </record>
+        
+        <record id="base.FJD" model="res.currency">
+            <field name="name">FJD</field>
+            <field name="symbol">FJ$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateFJD" model="res.currency.rate">
+            <field name="currency_id" ref="base.FJD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">2.22</field>
+        </record>
+        
+        <record id="base.GEL" model="res.currency">
+            <field name="name">GEL</field>
+            <field name="symbol">ლ</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateGEL" model="res.currency.rate">
+            <field name="currency_id" ref="base.GEL" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">2.018</field>
+        </record>
+        
+        <record id="base.GIP" model="res.currency">
+            <field name="name">GIP</field>
+            <field name="symbol">£</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateGIP" model="res.currency.rate">
+            <field name="currency_id" ref="base.GIP" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">0.786</field>
+        </record>
+        
+        <record id="base.QTQ" model="res.currency">
+            <field name="name">QTQ</field>
+            <field name="symbol">Q</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateQTQ" model="res.currency.rate">
+            <field name="currency_id" ref="base.QTQ" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">9.8827</field>
+        </record>
+        
+        <record id="base.GNF" model="res.currency">
+            <field name="name">GNF</field>
+            <field name="symbol">FG</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateGNF" model="res.currency.rate">
+            <field name="currency_id" ref="base.GNF" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">8835.85</field>
+        </record>
+        
+        <record id="base.GWP" model="res.currency">
+            <field name="name">GWP</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateGWP" model="res.currency.rate">
+            <field name="currency_id" ref="base.GWP" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">659.30</field>
+        </record>
+        
+        <record id="base.GYD" model="res.currency">
+            <field name="name">GYD</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateGYD" model="res.currency.rate">
+            <field name="currency_id" ref="base.GYD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">247.31</field>
+        </record>
+        
+        <record id="base.HTG" model="res.currency">
+            <field name="name">HTG</field>
+            <field name="symbol">G</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateHTG" model="res.currency.rate">
+            <field name="currency_id" ref="base.HTG" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">51.69</field>
+        </record>
+        
+        <record id="base.ISK" model="res.currency">
+            <field name="name">ISK</field>
+            <field name="symbol">kr</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateISK" model="res.currency.rate">
+            <field name="currency_id" ref="base.ISK" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">158.70</field>
+        </record>
+        
+        <record id="base.IRR" model="res.currency">
+            <field name="name">IRR</field>
+            <field name="symbol">﷼</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateIRR" model="res.currency.rate">
+            <field name="currency_id" ref="base.IRR" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">15059.97</field>
+        </record>
+        
+        <record id="base.IQD" model="res.currency">
+            <field name="name">IQD</field>
+            <field name="symbol"> ع.د</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateIQD" model="res.currency.rate">
+            <field name="currency_id" ref="base.IQD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1432.27</field>
+        </record>
+        
+        <record id="base.ILS" model="res.currency">
+            <field name="name">ILS</field>
+            <field name="symbol">₪</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateILS" model="res.currency.rate">
+            <field name="currency_id" ref="base.ILS" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">4.89</field>
+        </record>
+        
+        <record id="base.JMD" model="res.currency">
+            <field name="name">JMD</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateJMD" model="res.currency.rate">
+            <field name="currency_id" ref="base.JMD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">108.94 </field>
+        </record>
+        
+        <record id="base.JOD" model="res.currency">
+            <field name="name">JOD</field>
+            <field name="symbol"> د.ا </field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateJOD" model="res.currency.rate">
+            <field name="currency_id" ref="base.JOD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">0.87</field>
+        </record>
+        
+        <record id="base.KZT" model="res.currency">
+            <field name="name">KZT</field>
+            <field name="symbol">лв</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateKZT" model="res.currency.rate">
+            <field name="currency_id" ref="base.KZT" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">184.09</field>
+        </record>
+        
+        <record id="base.KES" model="res.currency">
+            <field name="name">KES</field>
+            <field name="symbol">KSh</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateKES" model="res.currency.rate">
+            <field name="currency_id" ref="base.KES" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">103.43</field>
+        </record>
+        
+        <record id="base.KWD" model="res.currency">
+            <field name="name">KWD</field>
+            <field name="symbol"> د.ك </field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateKWD" model="res.currency.rate">
+            <field name="currency_id" ref="base.KWD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">0.35</field>
+        </record>
+        
+        <record id="base.KGS" model="res.currency">
+            <field name="name">KGS</field>
+            <field name="symbol">лв</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateKGS" model="res.currency.rate">
+            <field name="currency_id" ref="base.KGS" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">57.93</field>
+        </record>
+        
+        <record id="base.LAK" model="res.currency">
+            <field name="name">LAK</field>
+            <field name="symbol">₭</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateLAK" model="res.currency.rate">
+            <field name="currency_id" ref="base.LAK" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">9847.72</field>
+        </record>
+        
+        <record id="base.LBP" model="res.currency">
+            <field name="name">LBP</field>
+            <field name="symbol">ل.ل</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateLBP" model="res.currency.rate">
+            <field name="currency_id" ref="base.LBP" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1853.94</field>
+        </record>
+        
+        <record id="base.LSL" model="res.currency">
+            <field name="name">LSL</field>
+            <field name="symbol">L</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateLSL" model="res.currency.rate">
+            <field name="currency_id" ref="base.LSL" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">10.06</field>
+        </record>
+        
+        <record id="base.LRD" model="res.currency">
+            <field name="name">LRD</field>
+            <field name="symbol">L$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateLRD" model="res.currency.rate">
+            <field name="currency_id" ref="base.LRD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">90.28</field>
+        </record>
+        
+        <record id="base.LYD" model="res.currency">
+            <field name="name">LYD</field>
+            <field name="symbol"> ل.د </field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateLYD" model="res.currency.rate">
+            <field name="currency_id" ref="base.LYD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1.54</field>
+        </record>
+        
+        <record id="base.MOP" model="res.currency">
+            <field name="name">MOP</field>
+            <field name="symbol">MOP$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateMOP" model="res.currency.rate">
+            <field name="currency_id" ref="base.MOP" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">9.81</field>
+        </record>
+        
+        <record id="base.MKD" model="res.currency">
+            <field name="name">MKD</field>
+            <field name="symbol">ден</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateMKD" model="res.currency.rate">
+            <field name="currency_id" ref="base.MKD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">60.29</field>
+        </record>
+        
+        <record id="base.MGA" model="res.currency">
+            <field name="name">MGA</field>
+            <field name="symbol">Ar</field>            
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateMGA" model="res.currency.rate">
+            <field name="currency_id" ref="base.MGA" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">2775.86</field>
+        </record>
+        
+        <record id="base.MWK" model="res.currency">
+            <field name="name">MWK</field>
+            <field name="symbol">MK</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateMWK" model="res.currency.rate">
+            <field name="currency_id" ref="base.MWK" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">329.79</field>
+        </record>
+        
+        <record id="base.MVR" model="res.currency">
+            <field name="name">MVR</field>
+            <field name="symbol">.ރ</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateMVR" model="res.currency.rate">
+            <field name="currency_id" ref="base.MVR" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">18.89</field>
+        </record>
+        
+        <record id="base.MRO" model="res.currency">
+            <field name="name">MRO</field>
+            <field name="symbol">UM</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateMRO" model="res.currency.rate">
+            <field name="currency_id" ref="base.MRO" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">362.23</field>
+        </record>
+        
+        <record id="base.MDL" model="res.currency">
+            <field name="name">MDL</field>
+            <field name="symbol">L</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateMDL" model="res.currency.rate">
+            <field name="currency_id" ref="base.MDL" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">15.27</field>
+        </record>
+        
+        <record id="base.MNT" model="res.currency">
+            <field name="name">MNT</field>
+            <field name="symbol">₮</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateMNT" model="res.currency.rate">
+            <field name="currency_id" ref="base.MNT" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1643.57</field>
+        </record>
+        
+        <record id="base.MAD" model="res.currency">
+            <field name="name">MAD</field>
+            <field name="symbol"> د.م. </field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateMAD" model="res.currency.rate">
+            <field name="currency_id" ref="base.MAD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">10.9962499</field>
+        </record>
+        
+        <record id="base.BND" model="res.currency">
+            <field name="name">BND</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateBND" model="res.currency.rate">
+            <field name="currency_id" ref="base.BND" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1.54</field>
+        </record>
+        
+        <record id="base.DZD" model="res.currency">
+            <field name="name">DZD</field>
+            <field name="symbol">DZ</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateDZD" model="res.currency.rate">
+            <field name="currency_id" ref="base.DZD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">99.65</field>
+        </record>
+        
+        <record id="base.GHS" model="res.currency">
+            <field name="name">GHS</field>
+            <field name="symbol">GH¢</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateGHS" model="res.currency.rate">
+            <field name="currency_id" ref="base.GHS" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">2.39</field>
+        </record>
+        
+        <record id="base.GMD" model="res.currency">
+            <field name="name">GMD</field>
+            <field name="symbol">D</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateGMD" model="res.currency.rate">
+            <field name="currency_id" ref="base.GMD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">38.89</field>
+        </record>
+        
+        <record id="base.ZRZ" model="res.currency">
+            <field name="name">ZRZ</field>
+            <field name="symbol">Ƶ</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateZRZ" model="res.currency.rate">
+            <field name="currency_id" ref="base.ZRZ" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1148948.76</field>
+        </record>
+        
+        <record id="base.MZN" model="res.currency">
+            <field name="name">MZN</field>
+            <field name="symbol">MT</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateMZN" model="res.currency.rate">
+            <field name="currency_id" ref="base.MZN" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">33.65</field>
+        </record>
+        
+        <record id="base.MMK" model="res.currency">
+            <field name="name">MMK</field>
+            <field name="symbol">K</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateMMK" model="res.currency.rate">
+            <field name="currency_id" ref="base.MMK" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1080.82</field>
+        </record>
+        
+        <record id="base.NAD" model="res.currency">
+            <field name="name">NAD</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateNAD" model="res.currency.rate">
+            <field name="currency_id" ref="base.NAD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">10.06</field>
+        </record>
+        
+        <record id="base.NPR" model="res.currency">
+            <field name="name">NPR</field>
+            <field name="symbol">₨</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateNPR" model="res.currency.rate">
+            <field name="currency_id" ref="base.NPR" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">108.33</field>
+        </record>
+        
+        <record id="base.ALL" model="res.currency">
+            <field name="name">ALL</field>
+            <field name="symbol">L</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateALL" model="res.currency.rate">
+            <field name="currency_id" ref="base.ALL" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">138.00</field>
+        </record>
+        
+        <record id="base.NIO" model="res.currency">
+            <field name="name">NIO</field>
+            <field name="symbol">C$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateNIO" model="res.currency.rate">
+            <field name="currency_id" ref="base.NIO" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">28.97</field>
+        </record>
+        
+        <record id="base.NGN" model="res.currency">
+            <field name="name">NGN</field>
+            <field name="symbol">₦</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateNGN" model="res.currency.rate">
+            <field name="currency_id" ref="base.NGN" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">196.77</field>
+        </record>
+        
+        <record id="base.KPW" model="res.currency">
+            <field name="name">KPW</field>
+            <field name="symbol">₩</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateKPW" model="res.currency.rate">
+            <field name="currency_id" ref="base.KPW" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1105.24376765</field>
+        </record>
+
+        <record id="base.ZWD" model="res.currency">
+            <field name="name">ZWD</field>
+            <field name="symbol">Z$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateZWD" model="res.currency.rate">
+            <field name="currency_id" ref="base.ZWD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">460.93</field>
+        </record>		
+
+        <record id="base.ZMK" model="res.currency">
+            <field name="name">ZMK</field>
+            <field name="symbol">ZK</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateZMK" model="res.currency.rate">
+            <field name="currency_id" ref="base.ZMK" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">6022.54902</field>
+        </record>
+
+        <record id="base.YER" model="res.currency">
+            <field name="name">YER</field>
+            <field name="symbol">﷼</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateYER" model="res.currency.rate">
+            <field name="currency_id" ref="base.YER" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">264.784483</field>
+        </record>
+
+        <record id="base.VUB" model="res.currency">
+            <field name="name">VEB</field>
+            <field name="symbol">Bs</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateVUB" model="res.currency.rate">
+            <field name="currency_id" ref="base.VUB" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">5.3821</field>
+        </record>
+
+        <record id="base.EUR" model="res.currency">
+            <field name="name">EUR</field>
+            <field name="symbol">€</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateEUR" model="res.currency.rate">
+            <field name="currency_id" ref="base.EUR" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1.0</field>
+        </record>
+
+        <record id="base.VUV" model="res.currency">
+            <field name="name">VUV</field>
+            <field name="symbol">VT</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateVUV" model="res.currency.rate">
+            <field name="currency_id" ref="base.VUV" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">114.024315363</field>
+        </record>		
+
+        <record id="base.UZS" model="res.currency">
+            <field name="name">UZS</field>
+            <field name="symbol">лв</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateUZS" model="res.currency.rate">
+            <field name="currency_id" ref="base.UZS" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">2331.3093</field>
+        </record>
+
+        <record id="base.UYP" model="res.currency">
+            <field name="name">UYP</field>
+            <field name="symbol">$U</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateUYP" model="res.currency.rate">
+            <field name="currency_id" ref="base.UYP" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">26.91</field>
+        </record>
+
+        <record id="base.AED" model="res.currency">
+            <field name="name">AED</field>
+            <field name="symbol">د.إ</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateAED" model="res.currency.rate">
+            <field name="currency_id" ref="base.AED" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">4.51253195</field>
+        </record>
+
+        <record id="base.UAG" model="res.currency">
+            <field name="name">UAG</field>
+            <field name="symbol">₴</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateUAG" model="res.currency.rate">
+            <field name="currency_id" ref="base.UAG" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">10.17</field>
+        </record>
+
+        <record id="base.TMM" model="res.currency">
+            <field name="name">TMM</field>
+            <field name="symbol">m</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateTMM" model="res.currency.rate">
+            <field name="currency_id" ref="base.TMM" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">0.00313859649123</field>
+        </record>
+
+        <record id="base.TRL" model="res.currency">
+            <field name="name">TRL</field>
+            <field name="symbol">TL</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateTRL" model="res.currency.rate">
+            <field name="currency_id" ref="base.TRL" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">2.255</field>
+        </record>
+		
+        <record id="base.TND" model="res.currency">
+            <field name="name">TND</field>
+            <field name="symbol">DT</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateTND" model="res.currency.rate">
+            <field name="currency_id" ref="base.TND" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">34.0661408</field>
+        </record>		
+
+        <record id="base.TTD" model="res.currency">
+            <field name="name">TTD</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateTTD" model="res.currency.rate">
+            <field name="currency_id" ref="base.TTD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">8.61926302</field>
+        </record>
+
+        <record id="base.TOP" model="res.currency">
+            <field name="name">TOP</field>
+            <field name="symbol">T$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateTOP" model="res.currency.rate">
+            <field name="currency_id" ref="base.TOP" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">31.1217</field>
+        </record>
+
+        <record id="base.THB" model="res.currency">
+            <field name="name">THB</field>
+            <field name="symbol">฿</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateTHB" model="res.currency.rate">
+            <field name="currency_id" ref="base.THB" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">38.4070124</field>
+        </record>
+
+        <record id="base.TZS" model="res.currency">
+            <field name="name">TZS</field>
+            <field name="symbol">x/y</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateTZS" model="res.currency.rate">
+            <field name="currency_id" ref="base.TZS" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1947.06815</field>
+        </record>		
+
+        <record id="base.TJR" model="res.currency">
+            <field name="name">TJR</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateTJR" model="res.currency.rate">
+            <field name="currency_id" ref="base.TJR" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">5.95</field>
+        </record>		
+
+        <record id="base.TWD" model="res.currency">
+            <field name="name">TWD</field>
+            <field name="symbol">NT$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateTWD" model="res.currency.rate">
+            <field name="currency_id" ref="base.TWD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">36.8329536</field>
+        </record>		
+
+        <record id="base.SYP" model="res.currency">
+            <field name="name">SYP</field>
+            <field name="symbol">£</field>            
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateSYP" model="res.currency.rate">
+            <field name="currency_id" ref="base.SYP" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">78.8338</field>
+        </record>		
+
+        <record id="base.SZL" model="res.currency">
+            <field name="name">SZL</field>
+            <field name="symbol">E</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateSZL" model="res.currency.rate">
+            <field name="currency_id" ref="base.SZL" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">10.07</field>
+        </record>
+		
+        <record id="base.SRG" model="res.currency">
+            <field name="name">SRG</field>
+            <field name="symbol">$</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateSRG" model="res.currency.rate">
+            <field name="currency_id" ref="base.SRG" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">3980.29</field>
+        </record>
+		
+        <record id="base.SDD" model="res.currency">
+            <field name="name">SDD</field>
+            <field name="symbol">£Sd</field>            
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateSDD" model="res.currency.rate">
+            <field name="currency_id" ref="base.SDD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">544.44</field>
+        </record>
+		
+        <record id="base.LKR" model="res.currency">
+            <field name="name">LKR</field>
+            <field name="symbol">Rs</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateLKR" model="res.currency.rate">
+            <field name="currency_id" ref="base.LKR" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">163.552526</field>
+        </record>		
+
+        <record id="base.SSP" model="res.currency">
+            <field name="name">SSP</field>
+            <field name="symbol">£</field>            
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateSSP" model="res.currency.rate">
+            <field name="currency_id" ref="base.SSP" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">5.528</field>
+        </record>	
+
+        <record id="base.GBP" model="res.currency">
+            <field name="name">GBP</field>
+            <field name="symbol">£</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+            <field name="position">before</field>
+        </record>
+        <record id="base.rateGBP" model="res.currency.rate">
+            <field name="currency_id" ref="base.GBP" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate"> 0.784221994</field>
+        </record>					
+
+        <record id="base.SOD" model="res.currency">
+            <field name="name">SOD</field>
+            <field name="symbol">Sh.</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateSOD" model="res.currency.rate">
+            <field name="currency_id" ref="base.SOD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1993.71</field>
+        </record>
+
+        <record id="base.SBD" model="res.currency">
+            <field name="name">SBD</field>
+            <field name="symbol">SI$</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateSBD" model="res.currency.rate">
+            <field name="currency_id" ref="base.SBD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">8.6605</field>
+        </record>
+
+        <record id="base.SLL" model="res.currency">
+            <field name="name">SLL</field>
+            <field name="symbol">Le</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateSLL" model="res.currency.rate">
+            <field name="currency_id" ref="base.SLL" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">5320.43478</field>
+        </record>
+
+        <record id="base.SCR" model="res.currency">
+            <field name="name">SCR</field>
+            <field name="symbol">SR</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateSCR" model="res.currency.rate">
+            <field name="currency_id" ref="base.SCR" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">18.2587287</field>
+        </record>
+
+        <record id="base.RSD" model="res.currency">
+            <field name="name">RSD</field>
+            <field name="symbol">din.</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateRSD" model="res.currency.rate">
+            <field name="currency_id" ref="base.RSD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">117.381295</field>
+        </record>
+
+        <record id="base.SAR" model="res.currency">
+            <field name="name">SAR</field>
+            <field name="symbol">SR</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateSAR" model="res.currency.rate">
+            <field name="currency_id" ref="base.SAR" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">4.58898972</field>
+        </record>	
+
+        <record id="base.STD" model="res.currency">
+            <field name="name">STD</field>
+            <field name="symbol">Db</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateSTD" model="res.currency.rate">
+            <field name="currency_id" ref="base.STD" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">24105.86</field>
+        </record>	
+
+        <record id="base.ITL" model="res.currency">
+            <field name="name">ITL</field>
+            <field name="symbol">₤</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateITL" model="res.currency.rate">
+            <field name="currency_id" ref="base.ITL" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1936.27</field>
+        </record>
+
+        <record id="base.WST" model="res.currency">
+            <field name="name">WST</field>
+            <field name="symbol">WS$</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateWST" model="res.currency.rate">
+            <field name="currency_id" ref="base.WST" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">2.8628</field>
+        </record>						
+
+        <record id="base.SHP" model="res.currency">
+            <field name="name">SHP</field>
+            <field name="symbol">£</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateSHP" model="res.currency.rate">
+            <field name="currency_id" ref="base.SHP" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">0.7856</field>
+        </record>
+
+        <record id="base.RWF" model="res.currency">
+            <field name="name">RWF</field>
+            <field name="symbol">RF</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateRWF" model="res.currency.rate">
+            <field name="currency_id" ref="base.RWF" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">752.57</field>
+        </record>		
+
+        <record id="base.RUR" model="res.currency">
+            <field name="name">RUR</field>
+            <field name="symbol">R</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateRUR" model="res.currency.rate">
+            <field name="currency_id" ref="base.RUR" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">39.6622695</field>
+        </record>
+
+        <record id="base.ROL" model="res.currency">
+            <field name="name">ROL</field>
+            <field name="symbol">L</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateROL" model="res.currency.rate">
+            <field name="currency_id" ref="base.ROL" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">45638.59</field>
+        </record>
+
+        <record id="base.QAR" model="res.currency">
+            <field name="name">QAR</field>
+            <field name="symbol">QR</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateQAR" model="res.currency.rate">
+            <field name="currency_id" ref="base.QAR" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">4.45500218</field>
+        </record>
+
+        <record id="base.PLZ" model="res.currency">
+            <field name="name">PLZ</field>
+            <field name="symbol">zł</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.ratePLZ" model="res.currency.rate">
+            <field name="currency_id" ref="base.PLZ" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">4.17281888</field>
+        </record>
+
+        <record id="base.PEN" model="res.currency">
+            <field name="name">PEN</field>
+            <field name="symbol">S/.</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.ratePEN" model="res.currency.rate">
+            <field name="currency_id" ref="base.PEN" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">3.20731573</field>
+        </record>	
+
+        <record id="base.PYG" model="res.currency">
+            <field name="name">PYG</field>
+            <field name="symbol">₲</field>			            
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.ratePYG" model="res.currency.rate">
+            <field name="currency_id" ref="base.PYG" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">5343.66812</field>
+        </record>					
+
+        <record id="base.PGK" model="res.currency">
+            <field name="name">PGK</field>
+            <field name="symbol">K</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.ratePGK" model="res.currency.rate">
+            <field name="currency_id" ref="base.PGK" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">2.5903895</field>
+        </record>		
+
+        <record id="base.PKR" model="res.currency">
+            <field name="name">PKR</field>
+            <field name="symbol">Rs.</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.ratePKR" model="res.currency.rate">
+            <field name="currency_id" ref="base.PKR" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">115.97432</field>
+        </record>	
+
+        <record id="base.OMR" model="res.currency">
+            <field name="name">OMR</field>
+            <field name="symbol">ر.ع.</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateOMR" model="res.currency.rate">
+            <field name="currency_id" ref="base.OMR" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">0.472921728</field>
+        </record>
+
+        <record id="base.CVE" model="res.currency">
+            <field name="name">CVE</field>
+            <field name="symbol">$</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateCVE" model="res.currency.rate">
+            <field name="currency_id" ref="base.CVE" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">0.61</field>
+        </record>						
+
+        <record id="base.SKK" model="res.currency">
+            <field name="name">SKK</field>
+            <field name="symbol">Sk</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateSKK" model="res.currency.rate">
+            <field name="currency_id" ref="base.SKK" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">30.1263029</field>
+        </record>
+
+        <record id="base.SIT" model="res.currency">
+            <field name="name">SIT</field>
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateSIT" model="res.currency.rate">
+            <field name="currency_id" ref="base.SIT" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">239.64</field>
+        </record>
+
+        <record id="base.YUM" model="res.currency">
+            <field name="name">YUM</field>
+            <field name="symbol">дин.</field>			
+            <field name="rounding">0.01</field>
+            <field name="accuracy">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="base.rateYUM" model="res.currency.rate">
+            <field name="currency_id" ref="base.YUM" />
+            <field eval="time.strftime('2010-01-01')" name="name"/>
+            <field name="from_currency_id" ref="base.EUR"/>
+            <field name="update_service_id" ref="base.currency_rate_update_service_manual"/>
+            <field name="currency_rate_type_id" ref="base.res_currency_rate_type_middle"/>
+            <field name="ratio">1</field>
+            <field name="rate">1.96</field>
+        </record>		
+		
+    </data>
+</openerp>

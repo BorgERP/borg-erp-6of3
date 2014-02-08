@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_currency_rate_update_service_manager,res.currency.rate.update.service.manager,model_res_currency_rate_update_service,base.group_partner_manager,1,0,0,0
+access_res_currency_rate_update_service_user,res.currency.rate.update.service.user,model_res_currency_rate_update_service,base.group_user,1,0,0,0
+access_res_currency_rate_update_service_system,res.currency.rate.update.service.system,model_res_currency_rate_update_service,base.group_system,1,1,1,1
+access_res_currency_rate_update_service_all,res.currency.rate.update.service.all,model_res_currency_rate_update_service,,0,0,0,0
+access_res_currency_rate_update_system,res.currency.rate.update.system,model_res_currency_rate_update,base.group_system,1,1,1,1

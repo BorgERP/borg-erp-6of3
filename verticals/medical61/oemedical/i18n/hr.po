@@ -1,0 +1,4034 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* oemedical
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-21 07:35+0000\n"
+"PO-Revision-Date: 2013-05-21 09:45+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: oemedical
+#: field:oemedical.patient.evaluation,mood:0
+msgid "Mood"
+msgstr "Raspoloženje"
+
+#. module: oemedical
+#: selection:oemedical.appointment,rrule_type:0
+msgid "Monthly"
+msgstr "Monthly"
+
+#. module: oemedical
+#: help:oemedical.prescription.line,short_comment:0
+msgid "Short comment on the specific drug"
+msgstr "Kratki komentar za specifičan tretman"
+
+#. module: oemedical
+#: field:oemedical.appointment,show_as:0
+msgid "Show as"
+msgstr "Show as"
+
+#. module: oemedical
+#: field:oemedical.appointment,day:0
+#: selection:oemedical.appointment,select1:0
+msgid "Date of month"
+msgstr "Date of month"
+
+#. module: oemedical
+#: view:oemedical.medicament:0
+#: field:oemedical.medicament,product:0
+msgid "Product"
+msgstr "Produkt"
+
+#. module: oemedical
+#: view:oemedical.medicament.category:0
+#: field:oemedical.medicament.category,parent_id:0
+msgid "Parent"
+msgstr "Roditelj"
+
+#. module: oemedical
+#: help:oemedical.medication.template,end_treatment:0
+#: help:oemedical.medication.template,start_treatment:0
+msgid "Date of start of Treatment"
+msgstr "Datum početka tretmana"
+
+#. module: oemedical
+#: field:oemedical.appointment,vtimezone:0
+msgid "Timezone"
+msgstr "Timezone"
+
+#. module: oemedical
+#: selection:oemedical.hospital.bed,bed_type:0
+msgid "Low Air Loss"
+msgstr "Low Air Loss"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_pathology
+msgid "oemedical.pathology"
+msgstr " "
+
+#. module: oemedical
+#: field:oemedical.patient.evaluation,loc_verbal:0
+msgid "Glasgow - Verbal"
+msgstr "Glasgow - Verbal"
+
+#. module: oemedical
+#: view:oemedical.medication.dosage:0
+msgid "Oemedical Medication Dosage"
+msgstr "Doziranje lijekova"
+
+#. module: oemedical
+#: view:oemedical.prescription.line:0
+#: field:oemedical.prescription.line,quantity:0
+msgid "Quantity"
+msgstr "Količina"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,respiratory_rate:0
+msgid "Respiratory Rate"
+msgstr "Broj udisaja unutar jedne minute"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_physician_view
+#: model:ir.ui.menu,name:oemedical.oemedical_physician
+#: view:oemedical.appointment:0
+#: field:oemedical.appointment,doctor:0
+#: view:oemedical.patient.disease:0
+#: field:oemedical.patient.disease,doctor:0
+#: view:oemedical.patient.medication:0
+#: field:oemedical.patient.medication,doctor:0
+msgid "Physician"
+msgstr "Doktor / terapeut"
+
+#. module: oemedical
+#: view:oemedical.insurance:0
+msgid "Oemedical Insurance"
+msgstr "Zdravstveno osiguranje"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_patient_disease
+msgid "oemedical.patient.disease"
+msgstr " "
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_hospital_or_view
+#: model:ir.ui.menu,name:oemedical.oemedical_hospital_or
+msgid "Hospital Or"
+msgstr "Dvorana za tretman"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_hospital_building
+msgid "oemedical.hospital.building"
+msgstr " "
+
+#. module: oemedical
+#: selection:oemedical.appointment,rrule_type:0
+msgid "Yearly"
+msgstr "Yearly"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,object_recognition:0
+msgid "Object Recognition"
+msgstr "Prepoznavanje stvari"
+
+#. module: oemedical
+#: model:ir.ui.menu,name:oemedical.oemedical_root_sub
+msgid "Configuration"
+msgstr "Konfiguracija"
+
+#. module: oemedical
+#: help:res.partner,is_insurance_company:0
+msgid "Check if the party is an Insurance Company"
+msgstr "Klikni ako je stranka ujedno i osiguravajuća tvrtka"
+
+#. module: oemedical
+#: view:oemedical.patient.disease:0
+#: field:oemedical.patient.disease,pregnancy_warning:0
+msgid "Pregnancy warning"
+msgstr "Upozorenje kod trudnoće"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,vocabulary:0
+msgid "Check this box if the patient lacks basic intelectual capacity, when she/he can not describe elementary objects"
+msgstr "Kliknite ako pacijent nema osnovne intelektualne sposobnosti, kada on/ona ne može opisati osnovne predmete"
+
+#. module: oemedical
+#: view:oemedical.medication.template:0
+#: field:oemedical.medication.template,dose:0
+msgid "Dose"
+msgstr "Doziranje"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_res_partner
+msgid "Partner"
+msgstr "Partner"
+
+#. module: oemedical
+#: field:oemedical.appointment,organizer:0
+#: field:oemedical.appointment,organizer_id:0
+msgid "Organizer"
+msgstr "Organizer"
+
+#. module: oemedical
+#: view:oemedical.patient.disease:0
+#: field:oemedical.patient.disease,is_infectious:0
+msgid "Infectious Disease"
+msgstr "Zarazne bolesti"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_occupation_view
+#: model:ir.ui.menu,name:oemedical.oemedical_occupation
+msgid "Occupation"
+msgstr "Profesija / zanimanje"
+
+#. module: oemedical
+#: view:oemedical.vaccination:0
+#: field:oemedical.vaccination,dose:0
+msgid "Dose #"
+msgstr "Broj doziranja"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_medication_template
+msgid "oemedical.medication.template"
+msgstr " "
+
+#. module: oemedical
+#: field:oemedical.appointment,end_type:0
+msgid "Recurrence termination"
+msgstr "Recurrence termination"
+
+#. module: oemedical
+#: sql_constraint:res.users:0
+msgid "You can not have two users with the same login !"
+msgstr "Ne možete imati dva korisnika sa istim korisničkim imenom !"
+
+#. module: oemedical
+#: selection:oemedical.patient.disease,status:0
+msgid "healed"
+msgstr "izliječen"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,loc_eyes:0
+msgid "Opens eyes in response to painful stimuli"
+msgstr "Otvara oči kao odgovor na bolne podražaje "
+
+#. module: oemedical
+#: field:oemedical.appointment,state:0
+#: selection:oemedical.insurance,insurance_type:0
+#: selection:res.partner,insurance_company_type:0
+msgid "State"
+msgstr "State"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,bpm:0
+msgid "Heart Rate"
+msgstr "Otkucaji srca"
+
+#. module: oemedical
+#: view:oemedical.patient:0
+#: field:oemedical.patient,childbearing_age:0
+msgid "Potential for Childbearing"
+msgstr "Može roditi"
+
+#. module: oemedical
+#: help:oemedical.medicament,active_component:0
+msgid "Active Component"
+msgstr "Aktivna komponenta"
+
+#. module: oemedical
+#: view:oemedical.medicament:0
+#: field:oemedical.medicament,therapeutic_action:0
+msgid "Therapeutic effect"
+msgstr "Terapeutski učinak"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_patient_view
+#: model:ir.ui.menu,name:oemedical.oemedical_patient
+#: model:ir.ui.menu,name:oemedical.oemedical_patient_root
+#: view:oemedical.appointment:0
+#: field:oemedical.appointment,patient_id:0
+#: field:oemedical.insurance,patient_id:0
+#: view:oemedical.patient:0
+#: view:oemedical.patient.disease:0
+#: field:oemedical.patient.disease,patient_id:0
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,patient_id:0
+#: view:oemedical.patient.medication:0
+#: field:oemedical.patient.medication,patient_id:0
+#: view:oemedical.prescription.order:0
+#: field:oemedical.prescription.order,patient_id:0
+#: view:oemedical.vaccination:0
+#: field:oemedical.vaccination,patient_id:0
+#: view:res.partner:0
+#: field:res.partner,is_patient:0
+msgid "Patient"
+msgstr "Klijent"
+
+#. module: oemedical
+#: view:oemedical.drug.form:0
+#: field:oemedical.drug.form,name:0
+#: view:oemedical.medication.template:0
+#: field:oemedical.medication.template,form:0
+msgid "Form"
+msgstr "Oblik tretmana / lijeka"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_diagnostic_hypothesis_view
+#: model:ir.ui.menu,name:oemedical.oemedical_diagnostic_hypothesis
+msgid "Diagnostic Hypothesis"
+msgstr "Dijagnostička pretpostavka"
+
+#. module: oemedical
+#: selection:oemedical.patient,rh:0
+msgid "+"
+msgstr "+"
+
+#. module: oemedical
+#: selection:oemedical.appointment,class:0
+msgid "Public"
+msgstr "Public"
+
+#. module: oemedical
+#: help:oemedical.medication.dosage,abbreviation:0
+msgid "Dosage abbreviation, such as tid in the US or tds in the UK"
+msgstr "Dosage abbreviation, such as tid in the US or tds in the UK"
+
+#. module: oemedical
+#: selection:oemedical.patient,blood_type:0
+msgid "O"
+msgstr "O"
+
+#. module: oemedical
+#: field:oemedical.patient,therapy_goals:0
+msgid "Therapy goals"
+msgstr "Ciljevi terapeuta"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_procedure
+msgid "oemedical.procedure"
+msgstr " "
+
+#. module: oemedical
+#: field:oemedical.insurance,insurance_oib:0
+msgid "Company OIB"
+msgstr "Company OIB"
+
+#. module: oemedical
+#: help:oemedical.medication.template,frequency_prn:0
+msgid "Use it as needed, pro re nata"
+msgstr "Koristiti po potrebi"
+
+#. module: oemedical
+#: view:oemedical.patient.disease:0
+#: field:oemedical.patient.disease,diagnosed_date:0
+msgid "Date of Diagnosis"
+msgstr "Datum dijagnoze"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,ldl:0
+msgid "Last LDL"
+msgstr "Zadnji zapis LDL-a"
+
+#. module: oemedical
+#: field:oemedical.appointment,create_date:0
+msgid "Created"
+msgstr "Created"
+
+#. module: oemedical
+#: selection:oemedical.appointment,class:0
+msgid "Public for Employees"
+msgstr "Public for Employees"
+
+#. module: oemedical
+#: view:oemedical.patient:0
+#: field:oemedical.patient,age:0
+msgid "Age"
+msgstr "Dob"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,evaluation_type:0
+msgid "Periodic control"
+msgstr "Periodična kontrola"
+
+#. module: oemedical
+#: selection:oemedical.medication.template,duration_period:0
+#: selection:oemedical.medication.template,frequency_unit:0
+msgid "hours"
+msgstr "sati"
+
+#. module: oemedical
+#: view:res.partner:0
+msgid "Patients"
+msgstr "Patients"
+
+#. module: oemedical
+#: field:res.partner,relative_id:0
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: oemedical
+#: selection:oemedical.appointment,rrule_type:0
+msgid "Daily"
+msgstr "Daily"
+
+#. module: oemedical
+#: field:oemedical.medication.template,duration_period:0
+msgid "Treatment period"
+msgstr "Period liječenja/tretmana"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+#: field:oemedical.appointment,consultations:0
+#: help:oemedical.appointment,consultations:0
+msgid "Consultation Services"
+msgstr "Usluge konzultacija"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_diagnostic_hypothesis
+msgid "oemedical.diagnostic_hypothesis"
+msgstr " "
+
+#. module: oemedical
+#: field:res.partner,lastname:0
+#: help:res.partner,lastname:0
+msgid "Last Name"
+msgstr "Prezime"
+
+#. module: oemedical
+#: help:oemedical.hospital.ward,private:0
+msgid "Check this option for private room"
+msgstr "Klikni za privatnu sobu"
+
+#. module: oemedical
+#: view:oemedical.medicament:0
+#: field:oemedical.medicament,adverse_reaction:0
+#: view:oemedical.patient.medication:0
+#: field:oemedical.patient.medication,adverse_reaction:0
+msgid "Adverse Reactions"
+msgstr "Reakcije na lijek"
+
+#. module: oemedical
+#: field:oemedical.medicament.category,childs:0
+msgid "Children"
+msgstr "Djeca"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_operational_sector_view
+#: model:ir.ui.menu,name:oemedical.oemedical_operational_sector
+#: view:oemedical.family:0
+#: field:oemedical.family,operational_sector:0
+#: field:oemedical.operational_area,operational_sector:0
+msgid "Operational Sector"
+msgstr "Sektor tretmana"
+
+#. module: oemedical
+#: selection:oemedical.hospital.bed,state:0
+msgid "Occupied"
+msgstr "Zauzeto"
+
+#. module: oemedical
+#: view:oemedical.insurance:0
+#: field:oemedical.insurance,owner:0
+msgid "Owner"
+msgstr "Vlasnik"
+
+#. module: oemedical
+#: view:oemedical.prescription.order:0
+#: field:oemedical.prescription.order,user_id:0
+msgid "Prescribing Doctor"
+msgstr "Propisani terapeut"
+
+#. module: oemedical
+#: view:oemedical.insurance:0
+#: field:oemedical.insurance,category:0
+#: view:oemedical.medicament:0
+#: field:oemedical.medicament,category:0
+msgid "Category"
+msgstr "Kategorija"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_prescription_order_view
+#: model:ir.ui.menu,name:oemedical.oemedical_prescription_order
+msgid "Prescription Order"
+msgstr "Nalog tretmana"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_pathology_category
+msgid "oemedical.pathology.category"
+msgstr " "
+
+#. module: oemedical
+#: view:oemedical.disease_group.members:0
+#: field:oemedical.disease_group.members,disease_group_id:0
+msgid "Group"
+msgstr "Grupa"
+
+#. module: oemedical
+#: help:oemedical.family_member,member:0
+msgid "Family Member Name"
+msgstr "Ime člana obitelji"
+
+#. module: oemedical
+#: help:oemedical.patient.disease,is_infectious:0
+msgid "Check if the patient has an infectioustransmissible disease"
+msgstr "Klikni ako pacijent ima prijenosne zarazne bolesti"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,doctor:0
+msgid "Doctor"
+msgstr "Doktor"
+
+#. module: oemedical
+#: help:res.partner,is_patient:0
+msgid "Check if the party is a patient"
+msgstr "Klikni ako je stranka ujedno i pacijent"
+
+#. module: oemedical
+#: field:oemedical.family_member,member:0
+msgid "Member"
+msgstr "Član"
+
+#. module: oemedical
+#: help:oemedical.appointment,location:0
+msgid "Location of Event"
+msgstr "Location of Event"
+
+#. module: oemedical
+#: field:oemedical.appointment,rrule:0
+msgid "Recurrent Rule"
+msgstr "Recurrent Rule"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,height:0
+msgid "Height in centimeters, eg 175"
+msgstr "Visina u centimetrima, npr. 175"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_insurance
+msgid "oemedical.insurance"
+msgstr " "
+
+#. module: oemedical
+#: help:oemedical.physician,health_professional:0
+msgid "Health Professional's Name, from the partner list"
+msgstr "Naziv stručnog zvanja, dodano sa liste partnera"
+
+#. module: oemedical
+#: view:oemedical.diagnostic_hypothesis:0
+#: field:oemedical.diagnostic_hypothesis,evaluation_id:0
+#: view:oemedical.directions:0
+#: field:oemedical.directions,evaluation_id:0
+#: view:oemedical.patient:0
+#: view:oemedical.secondary_condition:0
+#: field:oemedical.secondary_condition,evaluation_id:0
+#: view:oemedical.signs_and_symptoms:0
+#: field:oemedical.signs_and_symptoms,evaluation_id:0
+msgid "Evaluation"
+msgstr "Procjena"
+
+#. module: oemedical
+#: view:oemedical.insurance:0
+#: field:oemedical.insurance,member_exp:0
+msgid "Expiration date"
+msgstr "Rok upotrebe"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_ethnicity
+msgid "oemedical.ethnicity"
+msgstr " "
+
+#. module: oemedical
+#: field:oemedical.hospital.bed,state:0
+#: field:oemedical.hospital.ward,state:0
+msgid "Status"
+msgstr "Stanje"
+
+#. module: oemedical
+#: selection:oemedical.appointment,month_list:0
+msgid "August"
+msgstr "August"
+
+#. module: oemedical
+#: help:oemedical.vaccination,institution:0
+msgid "Medical Center where the patient is being or was vaccinated"
+msgstr "Medicinski centar gdje je kijent bio ili dobio cjepivo"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,hba1c:0
+msgid "Last Glycated Hb level. Can be approximative."
+msgstr "Zadnja razina hemoglobina (HbA1c)). Može biti i približno."
+
+#. module: oemedical
+#: selection:oemedical.appointment,month_list:0
+msgid "June"
+msgstr "June"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,loc_motor:0
+msgid "Makes no movement"
+msgstr "Nema pomaka"
+
+#. module: oemedical
+#: view:oemedical.medicament.category:0
+msgid "Oemedical Medicament Category"
+msgstr "Oemedical Medicament Category"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+msgid "Appointments"
+msgstr "Appointments"
+
+#. module: oemedical
+#: view:oemedical.medication.template:0
+#: field:oemedical.medication.template,duration:0
+msgid "Treatment duration"
+msgstr "Trajanje tretmana/lijeka"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,whr:0
+msgid "WHR"
+msgstr "Omjer struka i bokova"
+
+#. module: oemedical
+#: field:oemedical.family,members:0
+msgid "Family Members"
+msgstr "Članovi obitelji"
+
+#. module: oemedical
+#: selection:oemedical.appointment,month_list:0
+msgid "October"
+msgstr "October"
+
+#. module: oemedical
+#: help:oemedical.patient,general_info:0
+msgid "General information about the patient"
+msgstr "Osnovne informacije o klijentu"
+
+#. module: oemedical
+#: selection:oemedical.appointment,week_list:0
+msgid "Wednesday"
+msgstr "Wednesday"
+
+#. module: oemedical
+#: view:oemedical.hospital.bed:0
+#: field:oemedical.hospital.bed,name:0
+#: field:product.product,is_bed:0
+msgid "Bed"
+msgstr "Krevet"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,loc_motor:0
+msgid "Flexion / Withdrawal to painful stimuli"
+msgstr "Reakcija na bolne podražaje"
+
+#. module: oemedical
+#: view:oemedical.pathology:0
+#: field:oemedical.pathology,protein:0
+msgid "Protein involved"
+msgstr "Uključeni proteini"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,signs_and_symptoms:0
+msgid "Enter the Signs and Symptoms                                         for the patient in this evaluation."
+msgstr "Unesi znakove i simptome                                         za klijenta u ovoj procjeni."
+
+#. module: oemedical
+#: view:oemedical.vaccination:0
+#: field:oemedical.vaccination,vaccine:0
+#: field:product.product,is_vaccine:0
+msgid "Vaccine"
+msgstr "Cjepivo"
+
+#. module: oemedical
+#: view:oemedical.medication.template:0
+#: field:oemedical.medication.template,dose_unit:0
+msgid "dose unit"
+msgstr "Jedinica doziranja"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_procedure_view
+#: model:ir.ui.menu,name:oemedical.oemedical_procedure
+#: view:oemedical.directions:0
+#: field:oemedical.directions,procedure_id:0
+msgid "Procedure"
+msgstr "Procedura"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,praxis:0
+msgid "Praxis"
+msgstr "Praksa"
+
+#. module: oemedical
+#: selection:oemedical.appointment,end_type:0
+msgid "End date"
+msgstr "End date"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_family_view
+#: model:ir.ui.menu,name:oemedical.oemedical_family
+#: view:oemedical.family:0
+#: field:oemedical.family,name:0
+#: view:oemedical.family_member:0
+#: field:oemedical.family_member,family_id:0
+#: view:oemedical.patient:0
+#: field:oemedical.patient,family:0
+msgid "Family"
+msgstr "Obitelj"
+
+#. module: oemedical
+#: help:oemedical.pathology,protein:0
+msgid "Name of the protein(s) affected"
+msgstr "Naziv proteina"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,height:0
+msgid "Height"
+msgstr "Visina"
+
+#. module: oemedical
+#: field:oemedical.patient,marital_status:0
+msgid "Marital Status"
+msgstr "Bračni status"
+
+#. module: oemedical
+#: help:oemedical.pathology,groups:0
+msgid "Specify the groups this pathology belongs. Some automated processes act upon the code of the group"
+msgstr "Specify the groups this pathology belongs. Some automated processes act upon the code of the group"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,tremor:0
+msgid "If associated  to a disease, please encode it on the patient disease history"
+msgstr "Ako je povezano sa bolešću, molim dodajte na povijest bolesti pacijenta"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_ethnicity_view
+#: model:ir.ui.menu,name:oemedical.oemedical_ethnicity
+msgid "Ethnicity"
+msgstr "Etnička skupina"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_drug_route_view
+#: model:ir.ui.menu,name:oemedical.oemedical_drug_route
+msgid "Drug Route"
+msgstr "Drug Route"
+
+#. module: oemedical
+#: view:oemedical.medicament:0
+#: field:oemedical.medicament,storage:0
+msgid "Storage Conditions"
+msgstr "Uvjeti skladištenja"
+
+#. module: oemedical
+#: selection:oemedical.patient.disease,allergy_type:0
+msgid "Misc Allergy"
+msgstr "Razne alergije"
+
+#. module: oemedical
+#: view:oemedical.hospital.ward:0
+#: field:oemedical.hospital.ward,microwave:0
+msgid "Microwave"
+msgstr "Mikrovalna"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+msgid "Details"
+msgstr "Details"
+
+#. module: oemedical
+#: help:oemedical.appointment,exrule:0
+msgid "Defines a rule or repeating pattern of time to exclude from the recurring rule."
+msgstr "Defines a rule or repeating pattern of time to exclude from the recurring rule."
+
+#. module: oemedical
+#: view:oemedical.family_member:0
+msgid "Party"
+msgstr "Stranka"
+
+#. module: oemedical
+#: help:res.partner,internal_user:0
+msgid "In GNU Health is the user (doctor, nurse) that logins.When the party is a doctor or a health professional, it will be the user that maps the doctor's party name. It must be present."
+msgstr "In GNU Health is the user (doctor, nurse) that logins.When the party is a doctor or a health professional, it will be the user that maps the doctor's party name. It must be present."
+
+#. module: oemedical
+#: view:oemedical.medicament:0
+#: field:oemedical.medicament,composition:0
+msgid "Composition"
+msgstr "Sastav"
+
+#. module: oemedical
+#: model:ir.ui.menu,name:oemedical.oemedical_medicament_root
+msgid "Medicaments"
+msgstr "Tretmani i lijekovi"
+
+#. module: oemedical
+#: view:oemedical.directions:0
+msgid "Oemedical Directions"
+msgstr "Smjerovi"
+
+#. module: oemedical
+#: help:oemedical.medication.template,indication:0
+msgid "Choose a disease for this medicament from the disease list. It can be an existing disease of the patient or a prophylactic."
+msgstr "Odaberi bolest za ovaj tretman sa popisa bolesti. To može biti postojeća bolest ili preventivna mjera."
+
+#. module: oemedical
+#: help:oemedical.pathology,category:0
+msgid "Select the main category for this disease This is usuallyassociated to the standard. For instance, the chapter on the ICD-10will be the main category for de disease"
+msgstr "Select the main category for this disease This is usuallyassociated to the standard. For instance, the chapter on the ICD-10will be the main category for de disease"
+
+#. module: oemedical
+#: view:oemedical.ethnicity:0
+#: field:oemedical.ethnicity,notes:0
+#: field:oemedical.patient,notes:0
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,notes:0
+msgid "Notes"
+msgstr "Zabilješke"
+
+#. module: oemedical
+#: selection:oemedical.hospital.ward,gender:0
+msgid "Men Ward"
+msgstr "Muški odjel"
+
+#. module: oemedical
+#: selection:oemedical.medicament,pregnancy_category:0
+#: selection:oemedical.patient,blood_type:0
+msgid "A"
+msgstr "A"
+
+#. module: oemedical
+#: view:oemedical.hospital.ward:0
+#: field:oemedical.hospital.ward,tv:0
+msgid "Television"
+msgstr "TV"
+
+#. module: oemedical
+#: help:oemedical.medication.template,common_dosage:0
+msgid "Common / standard dosage frequency for this medicament"
+msgstr "Standardni oblik trajanja tretmana / uzimanja lijeka"
+
+#. module: oemedical
+#: view:oemedical.disease_group.members:0
+#: field:oemedical.disease_group.members,name:0
+#: view:oemedical.patient.disease:0
+#: field:oemedical.patient.disease,pathology:0
+#: help:oemedical.patient.disease,pathology:0
+msgid "Disease"
+msgstr "Bolest"
+
+#. module: oemedical
+#: field:res.partner,alias:0
+msgid "Alias"
+msgstr "Nadimak"
+
+#. module: oemedical
+#: field:oemedical.patient.disease,status:0
+msgid "Status of the disease"
+msgstr "Status bolesti"
+
+#. module: oemedical
+#: help:oemedical.medication.template,duration:0
+msgid "Period that the patient must take the medication. in minutes, hours, days, months, years or indefinately"
+msgstr "Razdoblje u kojem su klijentu potrebni tretmani. U minutama, satima, danima, mjesecima, godinama ili zauvijek."
+
+#. module: oemedical
+#: field:oemedical.appointment,byday:0
+msgid "By day"
+msgstr "By day"
+
+#. module: oemedical
+#: selection:oemedical.patient.disease,status:0
+msgid "improving"
+msgstr "poboljšanje"
+
+#. module: oemedical
+#: view:oemedical.operational_sector:0
+#: field:oemedical.operational_sector,name:0
+msgid "Op. Sector"
+msgstr "Dvorana za tretman"
+
+#. module: oemedical
+#: view:oemedical.patient:0
+#: field:oemedical.patient,cod:0
+msgid "Cause of Death"
+msgstr "Uzrok smrti"
+
+#. module: oemedical
+#: view:oemedical.patient.disease:0
+#: field:oemedical.patient.disease,is_active:0
+msgid "Active disease"
+msgstr "Trenutna bolest"
+
+#. module: oemedical
+#: view:oemedical.patient:0
+#: field:oemedical.patient,dob:0
+msgid "DoB"
+msgstr "Datum rođenja"
+
+#. module: oemedical
+#: help:oemedical.appointment,alarm_id:0
+msgid "Set an alarm at this time, before the event occurs"
+msgstr "Set an alarm at this time, before the event occurs"
+
+#. module: oemedical
+#: field:oemedical.patient,functional_diagnosis:0
+msgid "Functional diagnosis"
+msgstr "Funkcionalna dijagnoza"
+
+#. module: oemedical
+#: field:res.partner,internal_user:0
+msgid "Internal User"
+msgstr "Postojeći klijent"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_specialty
+msgid "oemedical.specialty"
+msgstr " "
+
+#. module: oemedical
+#: constraint:product.product:0
+msgid "Error: Invalid ean code"
+msgstr "Greška: Neispravan barkod!"
+
+#. module: oemedical
+#: field:oemedical.patient.evaluation,secondary_conditions:0
+msgid "Secondary Conditions"
+msgstr "Sekundarni uvjeti"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,loc_verbal:0
+msgid "Incomprehensible sounds"
+msgstr "Neprepoznatiljivi zvukovi"
+
+#. module: oemedical
+#: help:oemedical.vaccination,vaccine:0
+msgid "Vaccine Name. Make sure that the vaccine (product) has all the proper information at product level. Information such as provider, supplier code, tracking number, etc.. This  information must always be present. If available, please copy / scan the vaccine leaflet and attach it to this record"
+msgstr "Vaccine Name. Make sure that the vaccine (product) has all the proper information at product level. Information such as provider, supplier code, tracking number, etc.. This  information must always be present. If available, please copy / scan the vaccine leaflet and attach it to this record"
+
+#. module: oemedical
+#: view:oemedical.vaccination:0
+#: field:oemedical.vaccination,next_dose_date:0
+msgid "Next Dose"
+msgstr "Sljedeći datum tretmana / lijeka"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_patient_disease_view
+#: model:ir.ui.menu,name:oemedical.oemedical_patient_disease
+msgid "Patient Disease"
+msgstr "Naziv bolesti klijenta"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,head_circumference:0
+msgid "Head circumference"
+msgstr "Opseg glave"
+
+#. module: oemedical
+#: help:oemedical.appointment,exdate:0
+msgid "This property defines the list of date/time exceptions for a recurring calendar component."
+msgstr "This property defines the list of date/time exceptions for a recurring calendar component."
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,weight:0
+msgid "Weight in Kilos"
+msgstr "Težina u kilogramima"
+
+#. module: oemedical
+#: view:oemedical.patient.disease:0
+#: field:oemedical.patient.disease,treatment_description:0
+msgid "Treatment Description"
+msgstr "Opis tretmana"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_directions
+msgid "oemedical.directions"
+msgstr " "
+
+#. module: oemedical
+#: help:oemedical.appointment,patient_id:0
+msgid "Patient Name"
+msgstr "Patient Name"
+
+#. module: oemedical
+#: selection:oemedical.medication.template,duration_period:0
+msgid "years"
+msgstr "godine"
+
+#. module: oemedical
+#: help:oemedical.hospital.bed,telephone_number:0
+msgid "Telephone number / Extension"
+msgstr "Broj telefona / dodatak"
+
+#. module: oemedical
+#: view:oemedical.insurance.plan:0
+#: field:oemedical.insurance.plan,notes:0
+#: view:oemedical.physician:0
+#: field:oemedical.physician,info:0
+msgid "Extra info"
+msgstr "Dodatne informacije"
+
+#. module: oemedical
+#: field:oemedical.patient.evaluation,signs_and_symptoms:0
+msgid "Signs and Symptoms"
+msgstr "Znakovi i simptomi"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,mood:0
+msgid "Disgust"
+msgstr "Gadljivost"
+
+#. module: oemedical
+#: view:oemedical.medicament:0
+msgid "Oemedical Medicament"
+msgstr "Oemedical Medicament"
+
+#. module: oemedical
+#: field:oemedical.patient,rh:0
+msgid "Rh"
+msgstr "Rh~faktor"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,hip:0
+msgid "Hip"
+msgstr "Širina bokova"
+
+#. module: oemedical
+#: help:oemedical.appointment,count:0
+msgid "Repeat x times"
+msgstr "Repeat x times"
+
+#. module: oemedical
+#: selection:oemedical.hospital.ward,state:0
+msgid "Full"
+msgstr "Popunjen"
+
+#. module: oemedical
+#: selection:oemedical.appointment,month_list:0
+msgid "March"
+msgstr "March"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,evaluation_type:0
+msgid "Emergency"
+msgstr "Hitno"
+
+#. module: oemedical
+#: help:oemedical.hospital.ward,bio_hazard:0
+msgid "Check this option if there is biological hazard"
+msgstr "Kliknite ako postoji biološka opasnost"
+
+#. module: oemedical
+#: view:oemedical.medication.template:0
+#: field:oemedical.medication.template,frequency_prn:0
+msgid "PRN"
+msgstr "Tretman / lijek po potrebi"
+
+#. module: oemedical
+#: view:oemedical.insurance.plan:0
+#: field:oemedical.insurance.plan,is_default:0
+msgid "Default plan"
+msgstr "Default plan"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_specialty_view
+#: model:ir.ui.menu,name:oemedical.oemedical_specialty
+#: view:oemedical.appointment:0
+#: field:oemedical.appointment,speciality:0
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,specialty:0
+#: view:oemedical.physician:0
+#: field:oemedical.physician,specialty:0
+#: view:oemedical.specialty:0
+#: field:oemedical.specialty,name:0
+msgid "Specialty"
+msgstr "Specijalnost"
+
+#. module: oemedical
+#: selection:oemedical.medication.template,frequency_unit:0
+msgid "weeks"
+msgstr "tjedni"
+
+#. module: oemedical
+#: field:oemedical.patient,date_registered:0
+msgid "Date Registered"
+msgstr "Date Registered"
+
+#. module: oemedical
+#: view:oemedical.prescription.line:0
+#: field:oemedical.prescription.line,review:0
+msgid "Review"
+msgstr "Pregled"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_medication_dosage
+msgid "oemedical.medication.dosage"
+msgstr " "
+
+#. module: oemedical
+#: view:res.partner:0
+msgid "Suppliers"
+msgstr "Dobavljači"
+
+#. module: oemedical
+#: field:oemedical.prescription.order,prescription_line:0
+msgid "Prescription line"
+msgstr "Linija recepta"
+
+#. module: oemedical
+#: field:oemedical.patient.evaluation,diagnostic_hypothesis:0
+msgid "Hypotheses / DDx"
+msgstr "Hypotheses / DDx"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_patient
+msgid "oemedical.patient"
+msgstr " "
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_prescription_line
+msgid "oemedical.prescription.line"
+msgstr " "
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_drug_route
+msgid "oemedical.drug.route"
+msgstr " "
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,whr:0
+msgid "Waist to hip ratio"
+msgstr "Omjer struka i bokova"
+
+#. module: oemedical
+#: field:oemedical.patient,identification_code:0
+msgid "Reference"
+msgstr "Reference"
+
+#. module: oemedical
+#: help:oemedical.insurance.plan,is_default:0
+msgid "Check if this is the default plan when assigning this insurance company to a patient"
+msgstr "Check if this is the default plan when assigning this insurance company to a patient"
+
+#. module: oemedical
+#: view:oemedical.medication.dosage:0
+#: field:oemedical.medication.dosage,abbreviation:0
+msgid "Abbreviation"
+msgstr "Skraćenica"
+
+#. module: oemedical
+#: field:oemedical.appointment,end_date:0
+msgid "Repeat Until"
+msgstr "Repeat Until"
+
+#. module: oemedical
+#: selection:oemedical.patient.disease,disease_severity:0
+msgid "Mild"
+msgstr "Mild"
+
+#. module: oemedical
+#: help:oemedical.medication.dosage,code:0
+msgid "Dosage Code,for example: SNOMED 229798009 = 3 times per day"
+msgstr "Dosage Code,for example: SNOMED 229798009 = 3 times per day"
+
+#. module: oemedical
+#: field:oemedical.appointment,date_deadline:0
+msgid "Deadline"
+msgstr "Deadline"
+
+#. module: oemedical
+#: view:oemedical.ethnicity:0
+msgid "Oemedical Ethnicity"
+msgstr "Oemedical Ethnicity"
+
+#. module: oemedical
+#: help:oemedical.appointment,active:0
+msgid "If the active field is set to          true, it will allow you to hide the event alarm information without removing it."
+msgstr "If the active field is set to          true, it will allow you to hide the event alarm information without removing it."
+
+#. module: oemedical
+#: field:oemedical.patient,mbo:0
+msgid "Insurance number"
+msgstr "Insurance number"
+
+#. module: oemedical
+#: selection:oemedical.hospital.bed,bed_type:0
+msgid "Low Bed"
+msgstr "Niski krevet"
+
+#. module: oemedical
+#: view:oemedical.pathology.category:0
+#: field:oemedical.pathology.category,name:0
+msgid "Category Name"
+msgstr "Naziv kategorije"
+
+#. module: oemedical
+#: field:oemedical.appointment,sa:0
+msgid "Sat"
+msgstr "Sat"
+
+#. module: oemedical
+#: help:oemedical.medicament,pregnancy_category:0
+msgid ""
+"** FDA Pregancy Categories ***\n"
+"CATEGORY A :Adequate and well-controlled human studies have failed to demonstrate a risk to the fetus in the first trimester of pregnancy (and there is no evidence of risk in later trimesters).\n"
+"\n"
+"CATEGORY B : Animal reproduction studies have failed todemonstrate a risk to the fetus and there are no adequate and well-controlled studies in pregnant women OR Animal studies have shown an adverse effect, but adequate and well-controlled studies in pregnant women have failed to demonstrate a risk to the fetus in any trimester.\n"
+"\n"
+"CATEGORY C : Animal reproduction studies have shown an adverse effect on the fetus and there are no adequate and well-controlled studies in humans, but potential benefits may warrant use of the drug in pregnant women despite potential risks. \n"
+"\n"
+" CATEGORY D : There is positive evidence of human fetal  risk based on adverse reaction data from investigational or marketing experience or studies in humans, but potential benefits may warrant use of the drug in pregnant women despite potential risks.\n"
+"\n"
+"CATEGORY X : Studies in animals or humans have demonstrated fetal abnormalities and/or there is positive evidence of human fetal risk based on adverse reaction data from investigational or marketing experience, and the risks involved in use of the drug in pregnant women clearly outweigh potential benefits.\n"
+"\n"
+"CATEGORY N : Not yet classified"
+msgstr ""
+"** FDA Pregancy Categories ***\n"
+"CATEGORY A :Adequate and well-controlled human studies have failed to demonstrate a risk to the fetus in the first trimester of pregnancy (and there is no evidence of risk in later trimesters).\n"
+"\n"
+"CATEGORY B : Animal reproduction studies have failed todemonstrate a risk to the fetus and there are no adequate and well-controlled studies in pregnant women OR Animal studies have shown an adverse effect, but adequate and well-controlled studies in pregnant women have failed to demonstrate a risk to the fetus in any trimester.\n"
+"\n"
+"CATEGORY C : Animal reproduction studies have shown an adverse effect on the fetus and there are no adequate and well-controlled studies in humans, but potential benefits may warrant use of the drug in pregnant women despite potential risks. \n"
+"\n"
+" CATEGORY D : There is positive evidence of human fetal  risk based on adverse reaction data from investigational or marketing experience or studies in humans, but potential benefits may warrant use of the drug in pregnant women despite potential risks.\n"
+"\n"
+"CATEGORY X : Studies in animals or humans have demonstrated fetal abnormalities and/or there is positive evidence of human fetal risk based on adverse reaction data from investigational or marketing experience, and the risks involved in use of the drug in pregnant women clearly outweigh potential benefits.\n"
+"\n"
+"CATEGORY N : Not yet classified"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+msgid "From"
+msgstr "From"
+
+#. module: oemedical
+#: help:res.partner,is_doctor:0
+#: help:res.users,is_doctor:0
+msgid "Check if the party is a health professional"
+msgstr "Klikni ako stranka ima stručni naziv"
+
+#. module: oemedical
+#: selection:oemedical.appointment,week_list:0
+msgid "Saturday"
+msgstr "Saturday"
+
+#. module: oemedical
+#: help:oemedical.family_member,family_id:0
+msgid "Family code"
+msgstr "Šifra"
+
+#. module: oemedical
+#: view:oemedical.medication.template:0
+msgid "Oemedical Medication Template"
+msgstr "Oemedical Medication Template"
+
+#. module: oemedical
+#: view:oemedical.hospital.ward:0
+#: field:oemedical.hospital.ward,bio_hazard:0
+msgid "Bio Hazard"
+msgstr "Biološka opasnost"
+
+#. module: oemedical
+#: view:oemedical.prescription.line:0
+#: field:oemedical.prescription.line,prnt:0
+msgid "Print"
+msgstr "Ispis"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_patient_evaluation_view
+#: model:ir.ui.menu,name:oemedical.oemedical_patient_evaluation
+msgid "Patient Evaluation"
+msgstr "Procjena klijenta"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_family_member_view
+#: model:ir.ui.menu,name:oemedical.oemedical_family_member
+msgid "Family Member"
+msgstr "Član obitelji"
+
+#. module: oemedical
+#: field:oemedical.appointment,appointment_type:0
+#: field:oemedical.patient.evaluation,evaluation_type:0
+msgid "Type"
+msgstr "Tip"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,mood:0
+msgid "Flat"
+msgstr "Flat"
+
+#. module: oemedical
+#: help:oemedical.hospital.or,name:0
+msgid "Name of the Operating Room"
+msgstr "Ime terapeutske / operacijske sobe"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_product_product
+msgid "Proizvod"
+msgstr "Proizvod"
+
+#. module: oemedical
+#: view:oemedical.medicament:0
+#: field:oemedical.medicament,dosage:0
+msgid "Dosage Instructions"
+msgstr "Instrukcije tretmana / doziranja"
+
+#. module: oemedical
+#: selection:oemedical.appointment,appointment_type:0
+msgid "Outpatient"
+msgstr "Outpatient"
+
+#. module: oemedical
+#: help:oemedical.medicament,product:0
+msgid "Product Name"
+msgstr "Ime produkta"
+
+#. module: oemedical
+#: field:oemedical.appointment,recurrent_uid:0
+msgid "Recurrent ID"
+msgstr "Recurrent ID"
+
+#. module: oemedical
+#: view:oemedical.hospital.bed:0
+#: field:oemedical.hospital.bed,ward:0
+msgid "Ward"
+msgstr "Bolnički odjel"
+
+#. module: oemedical
+#: sql_constraint:oemedical.family:0
+msgid "Family Code must be unique!"
+msgstr "Šifra mora biti jedinstvena!"
+
+#. module: oemedical
+#: field:oemedical.appointment,tu:0
+msgid "Tue"
+msgstr "Tue"
+
+#. module: oemedical
+#: selection:oemedical.patient,marital_status:0
+msgid "Separated"
+msgstr "Odvojeno"
+
+#. module: oemedical
+#: view:oemedical.operational_sector:0
+msgid "Oemedical Operational_Sector"
+msgstr "Oemedical Operational_Sector"
+
+#. module: oemedical
+#: field:oemedical.appointment,su:0
+msgid "Sun"
+msgstr "Sun"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,reliable_info:0
+msgid "Reliable"
+msgstr "Vjerodostojnost informacije"
+
+#. module: oemedical
+#: field:res.partner,is_work:0
+msgid "Work"
+msgstr "Posao"
+
+#. module: oemedical
+#: field:oemedical.appointment,class:0
+msgid "Mark as"
+msgstr "Mark as"
+
+#. module: oemedical
+#: help:oemedical.appointment,rrule_type:0
+msgid "Let the event automatically repeat at that interval"
+msgstr "Let the event automatically repeat at that interval"
+
+#. module: oemedical
+#: view:oemedical.disease_group.members:0
+msgid "Oemedical Disease_Group Members"
+msgstr "Oemedical Disease_Group Members"
+
+#. module: oemedical
+#: field:oemedical.insurance,insurance_type:0
+#: field:res.partner,insurance_company_type:0
+msgid "Insurance Type"
+msgstr "Tip osiguranja"
+
+#. module: oemedical
+#: selection:oemedical.patient,sex:0
+msgid "Male"
+msgstr "Muškarac"
+
+#. module: oemedical
+#: model:ir.ui.menu,name:oemedical.oemedical_root
+#: view:res.partner:0
+msgid "OeMedical"
+msgstr "Medicina"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_medicament
+msgid "oemedical.medicament"
+msgstr " "
+
+#. module: oemedical
+#: view:oemedical.pathology.category:0
+#: field:oemedical.pathology.category,parent_id:0
+msgid "Parent Category"
+msgstr "Nadređena kategorija"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,calculation_ability:0
+msgid "Check this box if the patient can not do simple arithmetic problems"
+msgstr "Check this box if the patient can not do simple arithmetic problems"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,evaluation_type:0
+msgid "Phone call"
+msgstr "Telefonski poziv"
+
+#. module: oemedical
+#: selection:oemedical.appointment,month_list:0
+msgid "September"
+msgstr "September"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_hospital_unit
+msgid "oemedical.hospital.unit"
+msgstr " "
+
+#. module: oemedical
+#: view:oemedical.family:0
+msgid "Oemedical Family"
+msgstr "Oemedical Family"
+
+#. module: oemedical
+#: selection:oemedical.medication.template,duration_period:0
+#: selection:oemedical.medication.template,frequency_unit:0
+msgid "days"
+msgstr "dani"
+
+#. module: oemedical
+#: selection:oemedical.signs_and_symptoms,sign_or_symptom:0
+msgid "Sign"
+msgstr "Znak"
+
+#. module: oemedical
+#: selection:oemedical.appointment,urgency:0
+msgid "Urgent"
+msgstr "Hitno"
+
+#. module: oemedical
+#: view:oemedical.patient:0
+#: field:oemedical.patient,ssn:0
+msgid "SSN"
+msgstr "Broj zdravstvene iskaznice"
+
+#. module: oemedical
+#: help:oemedical.medicament,dosage:0
+msgid "Dosage / Indications"
+msgstr "Doziranje / nuspojave"
+
+#. module: oemedical
+#: field:oemedical.appointment,fr:0
+msgid "Fri"
+msgstr "Fri"
+
+#. module: oemedical
+#: view:oemedical.medication.template:0
+#: field:oemedical.medication.template,start_treatment:0
+#: view:oemedical.patient.disease:0
+#: field:oemedical.patient.disease,date_start_treatment:0
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,evaluation_start:0
+msgid "Start"
+msgstr "Početak"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,present_illness:0
+msgid "Present Illness"
+msgstr "Trenutne bolesti"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,evaluation_summary:0
+msgid "Evaluation Summary"
+msgstr "Sažetak procjene"
+
+#. module: oemedical
+#: selection:oemedical.hospital.bed,bed_type:0
+msgid "Clinitron"
+msgstr "Clinitron"
+
+#. module: oemedical
+#: help:oemedical.patient.medication,doctor:0
+msgid "Physician who prescribed the medicament"
+msgstr "Physician who prescribed the medicament"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+#: field:oemedical.appointment,appointment_date:0
+msgid "Date and Time"
+msgstr "Datum i vrijeme"
+
+#. module: oemedical
+#: view:oemedical.specialty:0
+msgid "Oemedical Specialty"
+msgstr "Specijalnost"
+
+#. module: oemedical
+#: field:oemedical.appointment,count:0
+msgid "Repeat"
+msgstr "Repeat"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_signs_and_symptoms
+msgid "oemedical.signs_and_symptoms"
+msgstr " "
+
+#. module: oemedical
+#: selection:oemedical.appointment,week_list:0
+msgid "Monday"
+msgstr "Monday"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,praxis:0
+msgid "Check this box if the patient is unable to make voluntarymovements"
+msgstr "Check this box if the patient is unable to make voluntarymovements"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,derived_from:0
+msgid "Derived from"
+msgstr "Broj kijenata na bolničkom krilu"
+
+#. module: oemedical
+#: field:oemedical.patient,medical_diagnosis:0
+msgid "Medical diagnosis"
+msgstr "Liječnička dijagnoza"
+
+#. module: oemedical
+#: help:oemedical.hospital.building,name:0
+msgid "Name of the building within the institution"
+msgstr "Broj zgrada unutar tvrtke/institucije"
+
+#. module: oemedical
+#: help:oemedical.hospital.ward,number_of_beds:0
+msgid "Number of patients per ward"
+msgstr "Broj klijenata po bolničkom odjelu"
+
+#. module: oemedical
+#: help:oemedical.patient,primary_care_doctor:0
+msgid "Current primary care / family doctor"
+msgstr "Trenutni doktor opće prakse / obiteljski doktor"
+
+#. module: oemedical
+#: field:oemedical.patient.evaluation,loc_eyes:0
+msgid "Glasgow - Eyes"
+msgstr "Glasgow - Eyes"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,dehydration:0
+msgid "Check this box if the patient show signs of dehydration. If associated  to a disease, please encode the  correspondent disease on the patient disease history. For example, Volume Depletion, E86 in ICD-10 encoding"
+msgstr "Check this box if the patient show signs of dehydration. If associated  to a disease, please encode the  correspondent disease on the patient disease history. For example, Volume Depletion, E86 in ICD-10 encoding"
+
+#. module: oemedical
+#: field:oemedical.appointment,date:0
+#: view:oemedical.vaccination:0
+#: field:oemedical.vaccination,date:0
+msgid "Date"
+msgstr "Datum"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,loc_verbal:0
+msgid "Confused, disoriented"
+msgstr "Zbunjen, dezorijentiran"
+
+#. module: oemedical
+#: help:oemedical.hospital.ward,name:0
+msgid "Ward / Room code"
+msgstr "Šifra bolničkog odjela / sobe"
+
+#. module: oemedical
+#: sql_constraint:oemedical.dose.unit:0
+msgid "Unit must be unique!"
+msgstr "Jedinica mora biti jedinstvena!"
+
+#. module: oemedical
+#: selection:oemedical.medicament,pregnancy_category:0
+#: selection:oemedical.patient,blood_type:0
+msgid "B"
+msgstr "B"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_hospital_ward_view
+#: model:ir.ui.menu,name:oemedical.oemedical_hospital_ward
+msgid "Hospital Ward"
+msgstr "Bolnički odjel"
+
+#. module: oemedical
+#: help:oemedical.pathology,name:0
+msgid "Disease name"
+msgstr "Naziv bolesti"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,diastolic:0
+msgid "Diastolic Pressure"
+msgstr "Dijastolički tlak"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,respiratory_rate:0
+msgid "Respiratory rate expressed in breaths per minute"
+msgstr "Broj udisaja izražen po minuti"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_prescription_line_view
+msgid "Prescription Line"
+msgstr "Linija recepta"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,loc:0
+msgid "Level of Consciousness"
+msgstr "Razina svijesti"
+
+#. module: oemedical
+#: selection:oemedical.hospital.bed,state:0
+msgid "Reserved"
+msgstr "Rezerviran"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_dose_unit_view
+#: model:ir.ui.menu,name:oemedical.oemedical_dose_unit
+msgid "Dose Unit"
+msgstr "Jedinica doziranja"
+
+#. module: oemedical
+#: view:oemedical.pathology:0
+#: field:oemedical.pathology,gene:0
+msgid "Gene"
+msgstr "Gen"
+
+#. module: oemedical
+#: view:oemedical.patient.medication:0
+#: field:oemedical.patient.medication,discontinued:0
+msgid "Discontinued"
+msgstr "Prekid tretmana / lijeka"
+
+#. module: oemedical
+#: view:oemedical.patient:0
+#: field:oemedical.patient,primary_care_doctor:0
+msgid "Primary Care Doctor"
+msgstr "Obiteljski doktor"
+
+#. module: oemedical
+#: view:oemedical.drug.form:0
+#: field:oemedical.drug.form,code:0
+#: view:oemedical.drug.route:0
+#: field:oemedical.drug.route,code:0
+#: view:oemedical.ethnicity:0
+#: field:oemedical.ethnicity,code:0
+#: view:oemedical.hospital.building:0
+#: field:oemedical.hospital.building,code:0
+#: view:oemedical.hospital.unit:0
+#: field:oemedical.hospital.unit,code:0
+#: view:oemedical.medication.dosage:0
+#: field:oemedical.medication.dosage,code:0
+#: view:oemedical.occupation:0
+#: field:oemedical.occupation,code:0
+#: view:oemedical.pathology:0
+#: field:oemedical.pathology,code:0
+#: view:oemedical.pathology.group:0
+#: field:oemedical.pathology.group,code:0
+#: view:oemedical.patient.disease:0
+#: field:oemedical.patient.disease,pcs_code:0
+#: view:oemedical.procedure:0
+#: field:oemedical.procedure,name:0
+#: view:oemedical.specialty:0
+#: field:oemedical.specialty,code:0
+msgid "Code"
+msgstr "Šifra"
+
+#. module: oemedical
+#: help:oemedical.patient,current_insurance:0
+msgid "Insurance information. You may choose from the different insurances belonging to the patient"
+msgstr "Informacije o osiguraje. Možete odabrati od različitih osiguranja koja pripadaju klijentu"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,orientation:0
+msgid "Orientation"
+msgstr "Dezorijentiranost"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,information_source:0
+msgid "Source"
+msgstr "Izvor"
+
+#. module: oemedical
+#: help:oemedical.patient,critical_info:0
+msgid "Write any important information on the patient's disease, surgeries, allergies, ..."
+msgstr "Važne informacije o bolestima klijenta, operacijama, alergijama, itd."
+
+#. module: oemedical
+#: field:oemedical.patient,sex:0
+msgid "Sex"
+msgstr "Spol"
+
+#. module: oemedical
+#: help:res.partner,is_pharmacy:0
+msgid "Check if the party is a Pharmacy"
+msgstr "Klikni ako je stranak ujedno i ljekarna"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_family
+msgid "oemedical.family"
+msgstr " "
+
+#. module: oemedical
+#: view:oemedical.medication.dosage:0
+#: field:oemedical.medication.dosage,name:0
+#: view:oemedical.medication.template:0
+#: field:oemedical.medication.template,common_dosage:0
+#: field:oemedical.medication.template,frequency:0
+msgid "Frequency"
+msgstr "Razmak unutar tretmana / uzimanja lijeka"
+
+#. module: oemedical
+#: field:oemedical.hospital.bed,bed_type:0
+msgid "Bed Type"
+msgstr "Tip kreveta"
+
+#. module: oemedical
+#: view:oemedical.patient.medication:0
+#: field:oemedical.patient.medication,course_completed:0
+msgid "Course Completed"
+msgstr "Završen tretman/tečaj"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_res_users
+msgid "res.users"
+msgstr "res.users"
+
+#. module: oemedical
+#: help:oemedical.pathology.group,name:0
+msgid "Group name"
+msgstr "Naziv grupe"
+
+#. module: oemedical
+#: view:oemedical.dose.unit:0
+#: field:oemedical.dose.unit,name:0
+#: view:oemedical.drug.route:0
+#: field:oemedical.drug.route,name:0
+#: view:oemedical.hospital.or:0
+#: field:oemedical.hospital.or,unit:0
+#: view:oemedical.hospital.ward:0
+#: field:oemedical.hospital.ward,unit:0
+msgid "Unit"
+msgstr "Jedinica"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,violent:0
+msgid "Violent Behaviour"
+msgstr "Agresivno ponašanje"
+
+#. module: oemedical
+#: view:oemedical.patient.disease:0
+#: field:oemedical.patient.disease,age:0
+msgid "Age when diagnosed"
+msgstr "Godište klijenta prilikom dijagnoze"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,diagnostic_hypothesis:0
+msgid "Presumptive Diagnosis. If no diagnosis can be made, encode the main sign or symptom."
+msgstr "Presumptive Diagnosis. If no diagnosis can be made, encode the main sign or symptom."
+
+#. module: oemedical
+#: field:oemedical.signs_and_symptoms,sign_or_symptom:0
+msgid "Subjective / Objective"
+msgstr "Subjektivno / objektivno"
+
+#. module: oemedical
+#: selection:oemedical.hospital.ward,gender:0
+msgid "Unisex"
+msgstr "Unisex"
+
+#. module: oemedical
+#: selection:oemedical.patient.disease,status:0
+msgid "unchanged"
+msgstr "nepromijenjen"
+
+#. module: oemedical
+#: help:oemedical.patient,diseases:0
+msgid "Mark if the patient has died"
+msgstr "Označi ako je klijent umro"
+
+#. module: oemedical
+#: view:oemedical.medicament:0
+#: field:oemedical.medicament,active_component:0
+msgid "Active component"
+msgstr "Aktivna komponenta"
+
+#. module: oemedical
+#: field:oemedical.appointment,exrule:0
+msgid "Exception Rule"
+msgstr "Exception Rule"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+#: field:oemedical.patient,other:0
+msgid "Other"
+msgstr "Ostalo"
+
+#. module: oemedical
+#: field:oemedical.pathology.category,childs:0
+msgid "Children Category"
+msgstr "Podređena kategorija"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,user_id:0
+msgid "Last Changed by"
+msgstr "Zadnja promjena od"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+msgid "Invite People"
+msgstr "Invite People"
+
+#. module: oemedical
+#: view:oemedical.prescription.order:0
+#: field:oemedical.prescription.order,notes:0
+msgid "Prescription Notes"
+msgstr "Dodatne zabilješke recepta"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_operational_area
+msgid "oemedical.operational_area"
+msgstr " "
+
+#. module: oemedical
+#: help:res.partner,is_institution:0
+msgid "Check if the party is a Medical Center"
+msgstr "Klikni ako je stranka ujedno i medicinski centar"
+
+#. module: oemedical
+#: help:oemedical.vaccination,vaccine_lot:0
+msgid "Please check on the vaccine (product) production lot numberand tracking number when available !"
+msgstr "Please check on the vaccine (product) production lot numberand tracking number when available !"
+
+#. module: oemedical
+#: field:oemedical.patient.evaluation,loc_motor:0
+msgid "Glasgow - Motor"
+msgstr "Glasgow - Motor"
+
+#. module: oemedical
+#: selection:oemedical.patient,rh:0
+msgid "-"
+msgstr "-"
+
+#. module: oemedical
+#: view:oemedical.patient.medication:0
+msgid "Oemedical Patient Medication"
+msgstr "Oemedical Patient Medication"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_medicament_category
+msgid "oemedical.medicament.category"
+msgstr " "
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+msgid "Oemedical Appointment"
+msgstr "Oemedical Appointment"
+
+#. module: oemedical
+#: help:product.product,is_medicament:0
+msgid "Check if the product is a medicament"
+msgstr "Check if the product is a medicament"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,violent:0
+msgid "Check this box if the patient is agressive or violent at the moment"
+msgstr "Check this box if the patient is agressive or violent at the moment"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_pathology_group_view
+#: model:ir.ui.menu,name:oemedical.oemedical_pathology_group
+msgid "Pathology Group"
+msgstr "Grupa patologije"
+
+#. module: oemedical
+#: view:oemedical.physician:0
+msgid "Oemedical Physician"
+msgstr "Oemedical Physician"
+
+#. module: oemedical
+#: selection:oemedical.patient.disease,status:0
+msgid "worsening"
+msgstr "pogoršanje"
+
+#. module: oemedical
+#: view:oemedical.hospital.or:0
+msgid "Oemedical Hospital Or"
+msgstr "Oemedical Hospital Or"
+
+#. module: oemedical
+#: help:oemedical.prescription.order,name:0
+msgid "Type in the ID of this prescription"
+msgstr "Type in the ID of this prescription"
+
+#. module: oemedical
+#: view:oemedical.ethnicity:0
+#: field:oemedical.ethnicity,name:0
+#: view:oemedical.hospital.building:0
+#: field:oemedical.hospital.building,name:0
+#: view:oemedical.hospital.or:0
+#: field:oemedical.hospital.or,name:0
+#: view:oemedical.hospital.unit:0
+#: field:oemedical.hospital.unit,name:0
+#: view:oemedical.hospital.ward:0
+#: field:oemedical.hospital.ward,name:0
+#: field:oemedical.insurance,name:0
+#: field:oemedical.insurance.plan,name:0
+#: view:oemedical.medicament:0
+#: field:oemedical.medicament,name:0
+#: view:oemedical.medicament.category:0
+#: field:oemedical.medicament.category,name:0
+#: view:oemedical.medication.template:0
+#: field:oemedical.medication.template,name:0
+#: view:oemedical.occupation:0
+#: field:oemedical.occupation,name:0
+#: view:oemedical.operational_area:0
+#: field:oemedical.operational_area,name:0
+#: view:oemedical.pathology:0
+#: field:oemedical.pathology,name:0
+#: view:oemedical.pathology.group:0
+#: field:oemedical.pathology.group,name:0
+#: view:oemedical.patient:0
+#: view:oemedical.physician:0
+#: field:oemedical.physician,name:0
+#: view:oemedical.vaccination:0
+#: field:oemedical.vaccination,name:0
+msgid "Name"
+msgstr "Ime"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_hospital_ward
+msgid "oemedical.hospital.ward"
+msgstr " "
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,mood:0
+msgid "Rage"
+msgstr "Bijes"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_hospital_or
+msgid "oemedical.hospital.or"
+msgstr " "
+
+#. module: oemedical
+#: field:oemedical.appointment,alarm_id:0
+#: field:oemedical.appointment,base_calendar_alarm_id:0
+msgid "Alarm"
+msgstr "Alarm"
+
+#. module: oemedical
+#: view:oemedical.vaccination:0
+msgid "Oemedical Vaccination"
+msgstr "Oemedical Vaccination"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,malnutrition:0
+msgid "Check this box if the patient show signs of malnutrition. If associated  to a disease, please encode the correspondent disease on the patient disease history. For example, Moderate protein-energy malnutrition, E44.0 in ICD-10 encoding"
+msgstr "Check this box if the patient show signs of malnutrition. If associated  to a disease, please encode the correspondent disease on the patient disease history. For example, Moderate protein-energy malnutrition, E44.0 in ICD-10 encoding"
+
+#. module: oemedical
+#: view:oemedical.patient:0
+msgid "Phisiotherapy"
+msgstr "Fizioterapija"
+
+#. module: oemedical
+#: view:oemedical.patient:0
+msgid "Diagnosis"
+msgstr "Dijagnoza"
+
+#. module: oemedical
+#: view:oemedical.hospital.ward:0
+#: field:oemedical.hospital.ward,refrigerator:0
+msgid "Refrigetator"
+msgstr "Hladnjak"
+
+#. module: oemedical
+#: help:product.product,is_vaccine:0
+msgid "Check if the product is a vaccine"
+msgstr "Check if the product is a vaccine"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_patient_evaluation
+msgid "oemedical.patient.evaluation"
+msgstr " "
+
+#. module: oemedical
+#: field:oemedical.appointment,operational_area:0
+msgid "Operational area"
+msgstr "Operational area"
+
+#. module: oemedical
+#: selection:oemedical.patient.disease,disease_severity:0
+msgid "Severe"
+msgstr "Strog/ozbiljan"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,notes_complaint:0
+msgid "Complaint details"
+msgstr "Detalji žalbe"
+
+#. module: oemedical
+#: help:oemedical.insurance,category:0
+msgid "Insurance company plan / category"
+msgstr "Plan / kategorija osiguravajuće tvrtke"
+
+#. module: oemedical
+#: view:oemedical.pathology.category:0
+msgid "Oemedical Pathology Category"
+msgstr "Kategorija patologije"
+
+#. module: oemedical
+#: selection:oemedical.appointment,byday:0
+msgid "Fifth"
+msgstr "Fifth"
+
+#. module: oemedical
+#: selection:oemedical.hospital.bed,state:0
+#: selection:oemedical.hospital.ward,state:0
+msgid "Not available"
+msgstr "Nije dostupno"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,derived_from:0
+msgid "Physician who derived the case"
+msgstr "Physician who derived the case"
+
+#. module: oemedical
+#: field:oemedical.patient.disease,disease_severity:0
+msgid "Severity"
+msgstr "Strogost/ozbiljnost"
+
+#. module: oemedical
+#: field:oemedical.appointment,we:0
+msgid "Wed"
+msgstr "Wed"
+
+#. module: oemedical
+#: view:oemedical.insurance:0
+#: field:oemedical.insurance,company:0
+#: view:oemedical.insurance.plan:0
+#: field:oemedical.insurance.plan,company:0
+#: field:res.partner,is_insurance_company:0
+msgid "Insurance Company"
+msgstr "Osiguravajuća tvrtka"
+
+#. module: oemedical
+#: selection:oemedical.medication.template,duration_period:0
+#: selection:oemedical.medication.template,frequency_unit:0
+msgid "minutes"
+msgstr "minuta"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+#: field:oemedical.appointment,comments:0
+#: view:oemedical.diagnostic_hypothesis:0
+#: field:oemedical.diagnostic_hypothesis,comments:0
+#: view:oemedical.directions:0
+#: field:oemedical.directions,comments:0
+#: view:oemedical.secondary_condition:0
+#: field:oemedical.secondary_condition,comments:0
+#: view:oemedical.signs_and_symptoms:0
+#: field:oemedical.signs_and_symptoms,comments:0
+msgid "Comments"
+msgstr "Komentari"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+#: view:oemedical.diagnostic_hypothesis:0
+#: view:oemedical.directions:0
+#: view:oemedical.disease_group.members:0
+#: view:oemedical.dose.unit:0
+#: view:oemedical.drug.form:0
+#: view:oemedical.drug.route:0
+#: view:oemedical.ethnicity:0
+#: view:oemedical.family:0
+#: view:oemedical.family_member:0
+#: view:oemedical.hospital.bed:0
+#: view:oemedical.hospital.building:0
+#: view:oemedical.hospital.or:0
+#: view:oemedical.hospital.unit:0
+#: view:oemedical.hospital.ward:0
+#: view:oemedical.insurance:0
+#: view:oemedical.insurance.plan:0
+#: view:oemedical.medicament:0
+#: view:oemedical.medicament.category:0
+#: view:oemedical.medication.dosage:0
+#: view:oemedical.medication.template:0
+#: view:oemedical.occupation:0
+#: view:oemedical.operational_area:0
+#: view:oemedical.operational_sector:0
+#: view:oemedical.pathology:0
+#: view:oemedical.pathology.category:0
+#: view:oemedical.pathology.group:0
+#: view:oemedical.patient:0
+#: view:oemedical.patient.disease:0
+#: view:oemedical.patient.evaluation:0
+#: view:oemedical.patient.medication:0
+#: view:oemedical.physician:0
+#: view:oemedical.prescription.line:0
+#: view:oemedical.prescription.order:0
+#: view:oemedical.procedure:0
+#: view:oemedical.secondary_condition:0
+#: view:oemedical.signs_and_symptoms:0
+#: view:oemedical.specialty:0
+#: view:oemedical.vaccination:0
+msgid "Group By..."
+msgstr "Grupiraj prema..."
+
+#. module: oemedical
+#: help:oemedical.operational_sector,name:0
+msgid "Region included in an operational area"
+msgstr "Uključena regija u operativni prostor"
+
+#. module: oemedical
+#: view:oemedical.family_member:0
+#: field:oemedical.family_member,role:0
+msgid "Role"
+msgstr "Uloga"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+msgid "Invitation details"
+msgstr "Invitation details"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_pathology_category_view
+#: model:ir.ui.menu,name:oemedical.oemedical_pathology_category
+msgid "Pathology Category"
+msgstr "Kategorija patologije"
+
+#. module: oemedical
+#: view:oemedical.hospital.ward:0
+#: field:oemedical.hospital.ward,ac:0
+msgid "Air Conditioning"
+msgstr "Klima uređaj"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_medication_template_view
+#: model:ir.ui.menu,name:oemedical.oemedical_medication_template
+#: view:oemedical.patient.medication:0
+#: field:oemedical.patient.medication,template:0
+#: view:oemedical.prescription.line:0
+#: field:oemedical.prescription.line,template:0
+msgid "Medication Template"
+msgstr "Predložak tretmana/lijeka"
+
+#. module: oemedical
+#: field:oemedical.appointment,base_calendar_url:0
+msgid "Caldav URL"
+msgstr "Caldav URL"
+
+#. module: oemedical
+#: view:oemedical.medicament:0
+#: field:oemedical.medicament,pregnancy:0
+msgid "Pregnancy and Lactancy"
+msgstr "Pregnancy and Lactancy"
+
+#. module: oemedical
+#: selection:oemedical.appointment,show_as:0
+#: selection:oemedical.hospital.bed,state:0
+msgid "Free"
+msgstr "Besplatno"
+
+#. module: oemedical
+#: field:oemedical.appointment,mo:0
+msgid "Mon"
+msgstr "Mon"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,tremor:0
+msgid "Tremor"
+msgstr "Drhtavica"
+
+#. module: oemedical
+#: view:oemedical.prescription.order:0
+#: field:oemedical.prescription.order,pregnancy_warning:0
+msgid "Pregancy Warning"
+msgstr "Upozorenje na trudnoću"
+
+#. module: oemedical
+#: help:oemedical.medicament,therapeutic_action:0
+msgid "Therapeutic action"
+msgstr "Terapeutska radnja"
+
+#. module: oemedical
+#: field:res.partner,is_doctor:0
+#: field:res.users,is_doctor:0
+msgid "Health Prof"
+msgstr "Health Prof"
+
+#. module: oemedical
+#: field:oemedical.patient,vaccinations:0
+msgid "Vaccinations"
+msgstr "Cijepljenje"
+
+#. module: oemedical
+#: help:oemedical.appointment,recurrency:0
+msgid "Recurrent Meeting"
+msgstr "Recurrent Meeting"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,hba1c:0
+msgid "Glycated Hemoglobin"
+msgstr "Razina hemoglobina"
+
+#. module: oemedical
+#: view:oemedical.hospital.unit:0
+msgid "Oemedical Hospital Unit"
+msgstr "Oemedical Hospital Unit"
+
+#. module: oemedical
+#: selection:oemedical.patient.disease,allergy_type:0
+msgid "Drug Allergy"
+msgstr "Alergija na tretman / lijek"
+
+#. module: oemedical
+#: sql_constraint:oemedical.drug.form:0
+#: sql_constraint:oemedical.drug.route:0
+#: sql_constraint:oemedical.ethnicity:0
+#: sql_constraint:oemedical.hospital.or:0
+#: sql_constraint:oemedical.medication.dosage:0
+#: sql_constraint:oemedical.occupation:0
+#: sql_constraint:oemedical.operational_area:0
+#: sql_constraint:oemedical.operational_sector:0
+#: sql_constraint:oemedical.pathology:0
+#: sql_constraint:oemedical.specialty:0
+msgid "Name must be unique!"
+msgstr "Ime mora biti jedinstveno!"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,loc_motor:0
+msgid "Obeys commands"
+msgstr "Obeys commands"
+
+#. module: oemedical
+#: selection:oemedical.medicament,pregnancy_category:0
+msgid "X"
+msgstr "X"
+
+#. module: oemedical
+#: help:oemedical.medication.template,route:0
+msgid "Drug administration route code."
+msgstr "Drug administration route code."
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,ldl:0
+msgid "Last LDL Cholesterol reading. Can be approximative"
+msgstr "Last LDL Cholesterol reading. Can be approximative"
+
+#. module: oemedical
+#: field:oemedical.patient,evaluations:0
+msgid "Evaluations"
+msgstr "Evaluations"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,info_diagnosis:0
+msgid "Presumptive Diagnosis: Extra Info"
+msgstr "Postavljanje dijagnoze: dodatni info"
+
+#. module: oemedical
+#: view:res.partner:0
+msgid "Supplier Partners"
+msgstr "Partneri dobavljači"
+
+#. module: oemedical
+#: view:oemedical.hospital.ward:0
+#: field:oemedical.hospital.ward,floor:0
+msgid "Floor Number"
+msgstr "Broj kata"
+
+#. module: oemedical
+#: help:oemedical.hospital.bed,name:0
+msgid "Bed Number"
+msgstr "Broj kreveta"
+
+#. module: oemedical
+#: help:oemedical.patient,current_address:0
+msgid "Contact information. You may choose from the different contacts and addresses this patient has."
+msgstr "Informacije o kontaktu. Možete odabrati od različitih kontakata i adresa koje klijent sadrži."
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,cholesterol_total:0
+msgid "Last Cholesterol"
+msgstr "Zadnji zapis kolesterola"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,loc_motor:0
+msgid "Abnormal flexion to painful stimuli (decorticate response)"
+msgstr "Abnormal flexion to painful stimuli (decorticate response)"
+
+#. module: oemedical
+#: view:oemedical.hospital.bed:0
+#: field:oemedical.hospital.bed,extra_info:0
+#: view:oemedical.hospital.building:0
+#: field:oemedical.hospital.building,extra_info:0
+#: view:oemedical.hospital.or:0
+#: field:oemedical.hospital.or,extra_info:0
+#: view:oemedical.hospital.unit:0
+#: field:oemedical.hospital.unit,extra_info:0
+#: view:oemedical.hospital.ward:0
+#: field:oemedical.hospital.ward,extra_info:0
+#: view:oemedical.insurance:0
+#: field:oemedical.insurance,notes:0
+#: view:oemedical.medicament:0
+#: field:oemedical.medicament,notes:0
+#: view:oemedical.pathology:0
+#: field:oemedical.pathology,info:0
+#: view:oemedical.patient.disease:0
+#: field:oemedical.patient.disease,extra_info:0
+#: view:oemedical.patient.medication:0
+#: field:oemedical.patient.medication,notes:0
+msgid "Extra Info"
+msgstr "Dodatne informacije"
+
+#. module: oemedical
+#: selection:oemedical.patient,sex:0
+msgid "Female"
+msgstr "Žena"
+
+#. module: oemedical
+#: view:oemedical.medication.template:0
+#: field:oemedical.medication.template,qty:0
+msgid "x"
+msgstr "x"
+
+#. module: oemedical
+#: field:oemedical.patient,activities_participation:0
+msgid "Activity participation"
+msgstr "Participacija aktivnosti"
+
+#. module: oemedical
+#: field:oemedical.appointment,recurrent_id:0
+msgid "Recurrent ID date"
+msgstr "Recurrent ID date"
+
+#. module: oemedical
+#: selection:oemedical.patient,marital_status:0
+msgid "Single"
+msgstr "Sama/c"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_secondary_condition
+msgid "oemedical.secondary_condition"
+msgstr " "
+
+#. module: oemedical
+#: field:oemedical.patient,medications:0
+msgid "Medications"
+msgstr "Tretmani/lijekovi"
+
+#. module: oemedical
+#: field:oemedical.patient,analysis:0
+msgid "Analysis: structure-function"
+msgstr "Analiza: strukture-funkcije"
+
+#. module: oemedical
+#: selection:oemedical.appointment,byday:0
+msgid "Fourth"
+msgstr "Fourth"
+
+#. module: oemedical
+#: help:res.partner,activation_date:0
+msgid "Date of activation of the party"
+msgstr "Date of activation of the party"
+
+#. module: oemedical
+#: view:oemedical.hospital.ward:0
+#: field:oemedical.hospital.ward,internet:0
+msgid "Internet Access"
+msgstr "Internet"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,tag:0
+msgid "Last TAGs"
+msgstr "Zadnji zapis TAG-a"
+
+#. module: oemedical
+#: view:oemedical.patient:0
+#: field:oemedical.patient,ethnic_group:0
+msgid "Ethnic group"
+msgstr "Etnička skupina / nacionalnost"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,mood:0
+msgid "Euphoria"
+msgstr "Euphoria"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,osat:0
+msgid "Oxygen Saturation(arterial)."
+msgstr "Začepljenost arterija"
+
+#. module: oemedical
+#: field:res.partner,activation_date:0
+msgid "Activation date"
+msgstr "Activation date"
+
+#. module: oemedical
+#: field:oemedical.appointment,location:0
+msgid "Location"
+msgstr "Location"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+#: field:oemedical.appointment,name:0
+msgid "Appointment ID"
+msgstr "Šifra termina"
+
+#. module: oemedical
+#: field:oemedical.patient,blood_type:0
+msgid "Blood Type"
+msgstr "Krvna grupa"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,loc_verbal:0
+msgid "Makes no sounds"
+msgstr "Ne stvara zvukove"
+
+#. module: oemedical
+#: selection:oemedical.appointment,urgency:0
+msgid "Medical Emergency"
+msgstr "Medicinski hitno"
+
+#. module: oemedical
+#: view:oemedical.pathology:0
+msgid "Oemedical Pathology"
+msgstr "Oemedical Pathology"
+
+#. module: oemedical
+#: view:oemedical.patient.disease:0
+#: field:oemedical.patient.disease,is_on_treatment:0
+msgid "Currently on Treatment"
+msgstr "Trenutno na tretmanu / liječenju"
+
+#. module: oemedical
+#: field:res.partner,relationship:0
+msgid "Relationship"
+msgstr "Odnos"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+#: field:oemedical.appointment,institution:0
+msgid "Health Center"
+msgstr "Terapeutski centar"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_insurance_plan
+msgid "oemedical.insurance.plan"
+msgstr " "
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,loc_motor:0
+msgid "Extension to painful stimuli - decerebrate response -"
+msgstr "Extension to painful stimuli - decerebrate response -"
+
+#. module: oemedical
+#: help:oemedical.patient.medication,discontinued_reason:0
+msgid "Short description for discontinuing the treatment"
+msgstr "Kratki opis prestanka tretmana / liječenja"
+
+#. module: oemedical
+#: selection:oemedical.appointment,month_list:0
+msgid "July"
+msgstr "July"
+
+#. module: oemedical
+#: selection:oemedical.medicament,pregnancy_category:0
+msgid "C"
+msgstr "C"
+
+#. module: oemedical
+#: help:oemedical.patient.disease,short_comment:0
+msgid "Brief, one-line remark of the disease. Longer description will go on the Extra info field"
+msgstr "Brief, one-line remark of the disease. Longer description will go on the Extra info field"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,orientation:0
+msgid "Check this box if the patient is disoriented in time and/or space"
+msgstr "Check this box if the patient is disoriented in time and/or space"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+msgid "Cancel"
+msgstr "Cancel"
+
+#. module: oemedical
+#: view:oemedical.patient:0
+msgid "Oemedical Patient"
+msgstr "Klijent"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,temperature:0
+msgid "Temperature in celcius"
+msgstr "Temperatura u celzijusima"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_medicament_category_view
+#: model:ir.ui.menu,name:oemedical.oemedical_medicament_category
+msgid "Medicament Category"
+msgstr "Kategorija tretmana"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,osat:0
+msgid "Oxygen Saturation"
+msgstr "Začepljenost arterija"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,secondary_conditions:0
+msgid "Other, Secondary conditions found on the patient"
+msgstr "Other, Secondary conditions found on the patient"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,evaluation_type:0
+msgid "Telemedicine"
+msgstr "Telemedicine"
+
+#. module: oemedical
+#: help:oemedical.appointment,speciality:0
+msgid "Medical Specialty / Sector"
+msgstr "Medical Specialty / Sector"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,abstraction:0
+msgid "Check this box if the patient presents abnormalities in abstract reasoning"
+msgstr "Check this box if the patient presents abnormalities in abstract reasoning"
+
+#. module: oemedical
+#: view:oemedical.patient.disease:0
+#: field:oemedical.patient.disease,weeks_of_pregnancy:0
+msgid "Contracted in pregnancy week #"
+msgstr "Broj ugovorenih tjedana prilikom trudnoće"
+
+#. module: oemedical
+#: field:oemedical.appointment,month_list:0
+msgid "Month"
+msgstr "Month"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,dehydration:0
+msgid "Dehydration"
+msgstr "Dehidracija"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+msgid "Start Date"
+msgstr "Start Date"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,loc_eyes:0
+msgid "Does not Open Eyes"
+msgstr "Ne otvara oči"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+msgid "Delegate"
+msgstr "Delegate"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+msgid "Decline"
+msgstr "Decline"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,temperature:0
+msgid "Temperature"
+msgstr "Temperatura"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,loc_verbal:0
+msgid "Utters inappropriate words"
+msgstr "Utters inappropriate words"
+
+#. module: oemedical
+#: field:oemedical.patient,anamnesis:0
+msgid "Anamnesis"
+msgstr "Anamneza"
+
+#. module: oemedical
+#: help:oemedical.patient.disease,pcs_code:0
+msgid "Procedure code, for example, ICD-10-PCS Code 7-character string"
+msgstr "Procedure code, for example, ICD-10-PCS Code 7-character string"
+
+#. module: oemedical
+#: selection:oemedical.patient.disease,disease_severity:0
+msgid "Moderate"
+msgstr "Moderate"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_base_calendar_invite_attendee
+msgid "Invite Attendees"
+msgstr "Pozovi sudionike"
+
+#. module: oemedical
+#: help:oemedical.medication.template,qty:0
+msgid "Quantity of units (eg, 2 capsules) of the medicament"
+msgstr "Količina tretmana / uzimanja lijeka"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,head_circumference:0
+msgid "Head Circumference"
+msgstr "Opseg glave"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_appointment_view
+#: model:ir.ui.menu,name:oemedical.oemedical_appointment
+#: model:ir.ui.menu,name:oemedical.oemedical_appoitment_root
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,evaluation_date:0
+#: model:res.request.link,name:oemedical.request_link_meeting
+msgid "Appointment"
+msgstr "Termin"
+
+#. module: oemedical
+#: selection:oemedical.hospital.bed,bed_type:0
+msgid "Electric"
+msgstr "Electric"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,vocabulary:0
+msgid "Vocabulary"
+msgstr "Osnovne sposobnosti govora"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,evaluation_type:0
+msgid "Pre-arranged appointment"
+msgstr "Prethodno dogovoreni termin"
+
+#. module: oemedical
+#: view:oemedical.hospital.ward:0
+#: field:oemedical.hospital.ward,telephone:0
+msgid "Telephone access"
+msgstr "Pristup telefonu"
+
+#. module: oemedical
+#: view:oemedical.operational_area:0
+msgid "Oemedical Operational_Area"
+msgstr "Oemedical Operational_Area"
+
+#. module: oemedical
+#: selection:oemedical.appointment,end_type:0
+msgid "Number of repetitions"
+msgstr "Number of repetitions"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,bpm:0
+msgid "Heart rate expressed in beats per minute"
+msgstr "Heart rate expressed in beats per minute"
+
+#. module: oemedical
+#: field:oemedical.patient,phone:0
+msgid "Phone"
+msgstr "Phone"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_disease_group_members_view
+#: model:ir.ui.menu,name:oemedical.oemedical_disease_group_members
+msgid "Disease Group Members"
+msgstr "Članovi grupe bolesti"
+
+#. module: oemedical
+#: view:oemedical.insurance:0
+#: field:oemedical.insurance,plan_id:0
+#: view:oemedical.insurance.plan:0
+#: field:oemedical.insurance.plan,plan:0
+#: field:oemedical.patient,plan:0
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,directions:0
+msgid "Plan"
+msgstr "Plan"
+
+#. module: oemedical
+#: field:oemedical.pathology,groups:0
+msgid "Groups"
+msgstr "Grupe"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,loc_eyes:0
+msgid "Opens eyes in response to voice"
+msgstr "Otvara oči kao odgovor na glasovni upit"
+
+#. module: oemedical
+#: field:oemedical.appointment,active:0
+#: view:oemedical.patient.medication:0
+#: field:oemedical.patient.medication,is_active:0
+msgid "Active"
+msgstr "Aktivan"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_pathology_group
+msgid "oemedical.pathology.group"
+msgstr " "
+
+#. module: oemedical
+#: help:oemedical.prescription.line,prnt:0
+msgid "Check this box to print this line of the prescription."
+msgstr "Check this box to print this line of the prescription."
+
+#. module: oemedical
+#: selection:oemedical.signs_and_symptoms,sign_or_symptom:0
+msgid "Symptom"
+msgstr "Simptom"
+
+#. module: oemedical
+#: model:ir.ui.menu,name:oemedical.oemedical_prescription_root
+msgid "Prescription"
+msgstr "Tretman"
+
+#. module: oemedical
+#: view:oemedical.medication.template:0
+#: field:oemedical.medication.template,route:0
+msgid "Administration Route"
+msgstr "Administration Route"
+
+#. module: oemedical
+#: view:oemedical.medicament:0
+#: field:oemedical.medicament,pregnancy_warning:0
+msgid "Pregnancy Warning"
+msgstr "Upozorenje kod trudnoće"
+
+#. module: oemedical
+#: field:oemedical.family,info:0
+#: view:oemedical.operational_area:0
+#: field:oemedical.operational_area,info:0
+#: view:oemedical.operational_sector:0
+#: field:oemedical.operational_sector,info:0
+msgid "Extra Information"
+msgstr "Dodatne informacije"
+
+#. module: oemedical
+#: selection:oemedical.medicament,pregnancy_category:0
+msgid "N"
+msgstr "N"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_operational_sector
+msgid "oemedical.operational_sector"
+msgstr " "
+
+#. module: oemedical
+#: help:oemedical.medication.template,form:0
+msgid "Drug form, such as tablet or gel"
+msgstr "Drug form, such as tablet or gel"
+
+#. module: oemedical
+#: help:oemedical.medicament,indications:0
+msgid "Indications"
+msgstr "Nuspojave"
+
+#. module: oemedical
+#: view:oemedical.dose.unit:0
+msgid "Oemedical Dose Unit"
+msgstr "Oemedical Dose Unit"
+
+#. module: oemedical
+#: view:oemedical.prescription.line:0
+#: field:oemedical.prescription.line,prescription_order_id:0
+#: view:oemedical.prescription.order:0
+#: field:oemedical.prescription.order,name:0
+msgid "Prescription ID"
+msgstr "Šifra recepta"
+
+#. module: oemedical
+#: view:oemedical.insurance:0
+#: field:oemedical.insurance,number:0
+msgid "Number"
+msgstr "Broj"
+
+#. module: oemedical
+#: view:oemedical.drug.route:0
+msgid "Oemedical Drug Route"
+msgstr "Oemedical Drug Route"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,derived_to:0
+msgid "Physician to whom escalate / derive the case"
+msgstr "Physician to whom escalate / derive the case"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,actions:0
+msgid "Procedures / Actions to take"
+msgstr "Procedure / akcije za odraditi"
+
+#. module: oemedical
+#: help:oemedical.appointment,interval:0
+msgid "Repeat every (Days/Week/Month/Year)"
+msgstr "Repeat every (Days/Week/Month/Year)"
+
+#. module: oemedical
+#: selection:oemedical.appointment,week_list:0
+msgid "Tuesday"
+msgstr "Tuesday"
+
+#. module: oemedical
+#: field:oemedical.medicament,pregnancy_category:0
+msgid "Pregnancy Category"
+msgstr "Kategorija trudnoće"
+
+#. module: oemedical
+#: field:oemedical.patient.disease,allergy_type:0
+msgid "Allergy type"
+msgstr "Tip alergije"
+
+#. module: oemedical
+#: selection:oemedical.appointment,show_as:0
+msgid "Busy"
+msgstr "Busy"
+
+#. module: oemedical
+#: field:oemedical.appointment,interval:0
+msgid "Repeat every"
+msgstr "Repeat every"
+
+#. module: oemedical
+#: field:oemedical.appointment,recurrency:0
+msgid "Recurrent"
+msgstr "Recurrent"
+
+#. module: oemedical
+#: view:oemedical.prescription.order:0
+#: field:oemedical.prescription.order,prescription_warning_ack:0
+msgid "Prescription verified"
+msgstr "Odobren recept"
+
+#. module: oemedical
+#: field:oemedical.medication.template,frequency_unit:0
+msgid "unit"
+msgstr "Jedinica"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,knowledge_current_events:0
+msgid "Check this box if the patient can not respond to public notorious events"
+msgstr "Check this box if the patient can not respond to public notorious events"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,glycemia:0
+msgid "Last blood glucose level. Can be approximative."
+msgstr "Last blood glucose level. Can be approximative."
+
+#. module: oemedical
+#: help:oemedical.appointment,institution:0
+#: help:oemedical.hospital.building,institution:0
+#: help:oemedical.hospital.or,institution:0
+#: help:oemedical.hospital.unit,institution:0
+#: help:oemedical.hospital.ward,institution:0
+msgid "Medical Center"
+msgstr "Medicinski / terapeutski centar"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,abstraction:0
+msgid "Abstraction"
+msgstr "Apstraktnost"
+
+#. module: oemedical
+#: help:res.partner,is_person:0
+msgid "Check if the party is a person."
+msgstr "Klikni ako je stranka ujedno i osoba"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,diagnosis:0
+msgid "Presumptive Diagnosis"
+msgstr "Postavljanje dijagnoze"
+
+#. module: oemedical
+#: view:oemedical.patient:0
+#: field:oemedical.patient,lastname:0
+msgid "Lastname"
+msgstr "Prezime"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,hdl:0
+msgid "Last HDL"
+msgstr "Zadnji zapis HDL-a"
+
+#. module: oemedical
+#: help:oemedical.medication.template,admin_times:0
+msgid "Suggested administration hours. For example, at 08:00, 13:00 and 18:00 can be encoded like 08 13 18"
+msgstr "Suggested administration hours. For example, at 08:00, 13:00 and 18:00 can be encoded like 08 13 18"
+
+#. module: oemedical
+#: view:oemedical.patient:0
+#: field:oemedical.patient,current_address:0
+msgid "Address"
+msgstr "Adresa"
+
+#. module: oemedical
+#: view:oemedical.patient.disease:0
+#: field:oemedical.patient.disease,short_comment:0
+msgid "Remarks"
+msgstr "Primjedbe"
+
+#. module: oemedical
+#: selection:oemedical.insurance,insurance_type:0
+#: selection:res.partner,insurance_company_type:0
+msgid "Labour Union / Syndical"
+msgstr "Labour Union / Syndical"
+
+#. module: oemedical
+#: help:oemedical.medication.template,dose_unit:0
+msgid "Unit of measure for the medication to be taken"
+msgstr "Jedinica mjere tretmana / lijeka"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+msgid "End Date"
+msgstr "End Date"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,abdominal_circ:0
+msgid "Waist"
+msgstr "Opseg struka"
+
+#. module: oemedical
+#: selection:oemedical.appointment,byday:0
+msgid "Third"
+msgstr "Third"
+
+#. module: oemedical
+#: view:oemedical.medicament:0
+#: field:oemedical.medicament,overdosage:0
+#: help:oemedical.medicament,overdosage:0
+msgid "Overdosage"
+msgstr "Predoziranje"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_drug_form_view
+#: model:ir.ui.menu,name:oemedical.oemedical_drug_form
+msgid "Drug Form"
+msgstr "Drug Form"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_hospital_unit_view
+#: model:ir.ui.menu,name:oemedical.oemedical_hospital_unit
+msgid "Hospital Unit"
+msgstr "Bolnička jedinica"
+
+#. module: oemedical
+#: view:oemedical.medicament:0
+#: field:oemedical.medicament,indications:0
+#: view:oemedical.medication.template:0
+#: field:oemedical.medication.template,indication:0
+msgid "Indication"
+msgstr "Nuspojava"
+
+#. module: oemedical
+#: field:oemedical.appointment,week_list:0
+msgid "Weekday"
+msgstr "Weekday"
+
+#. module: oemedical
+#: view:oemedical.diagnostic_hypothesis:0
+msgid "Oemedical Diagnostic_Hypothesis"
+msgstr "Oemedical Diagnostic_Hypothesis"
+
+#. module: oemedical
+#: view:oemedical.insurance:0
+#: field:oemedical.insurance,member_since:0
+msgid "Member since"
+msgstr "Član od"
+
+#. module: oemedical
+#: field:oemedical.appointment,id:0
+#: view:oemedical.patient:0
+#: view:oemedical.physician:0
+#: field:oemedical.physician,code:0
+msgid "ID"
+msgstr "Šifra"
+
+#. module: oemedical
+#: view:oemedical.patient:0
+#: field:oemedical.patient,deceased:0
+msgid "Deceased"
+msgstr "Pokojni"
+
+#. module: oemedical
+#: field:oemedical.patient,diseases:0
+msgid "Diseases"
+msgstr "Bolesti"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,derived_to:0
+msgid "Derived to"
+msgstr "Dodjeljuje se terapeutu / doktoru"
+
+#. module: oemedical
+#: field:oemedical.patient,client_goals:0
+msgid "Client goals"
+msgstr "Ciljevi klijenta"
+
+#. module: oemedical
+#: selection:oemedical.patient,marital_status:0
+msgid "Widowed"
+msgstr "Udovica"
+
+#. module: oemedical
+#: view:oemedical.hospital.building:0
+msgid "Oemedical Hospital Building"
+msgstr "Oemedical Hospital Building"
+
+#. module: oemedical
+#: selection:oemedical.patient.disease,allergy_type:0
+msgid "Misc Contraindication"
+msgstr "Razne nuspojave"
+
+#. module: oemedical
+#: help:oemedical.patient,family:0
+msgid "Family Code"
+msgstr "Šifra obitelji"
+
+#. module: oemedical
+#: view:oemedical.secondary_condition:0
+msgid "Oemedical Secondary_Condition"
+msgstr "Oemedical Secondary_Condition"
+
+#. module: oemedical
+#: help:oemedical.medicament,pregnancy_warning:0
+msgid "The drug represents risk to pregnancy or lactancy"
+msgstr "The drug represents risk to pregnancy or lactancy"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_hospital_bed
+msgid "oemedical.hospital.bed"
+msgstr " "
+
+#. module: oemedical
+#: selection:oemedical.hospital.bed,bed_type:0
+msgid "Circo Electric"
+msgstr "Circo Electric"
+
+#. module: oemedical
+#: help:oemedical.physician,institution:0
+msgid "Instituion where she/he works"
+msgstr "Tvrtka u kojoj on/ona radi"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_hospital_bed_view
+#: model:ir.ui.menu,name:oemedical.oemedical_hospital_bed
+msgid "Hospital Bed"
+msgstr "Bolnički krevet"
+
+#. module: oemedical
+#: field:oemedical.appointment,duration:0
+msgid "Duration"
+msgstr "Duration"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_disease_group_members
+msgid "oemedical.disease_group.members"
+msgstr " "
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,evaluation_date:0
+msgid "Enter or select the date / ID of the appointment related to this evaluation"
+msgstr "Unesi ili odaberi datum / šifru termina povezanu sa procjenom"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,information_source:0
+msgid "Source ofInformation, eg : Self, relative, friend ..."
+msgstr "Informacije o izvoru: npr. rođak, prijatelj, itd."
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_vaccination_view
+#: model:ir.ui.menu,name:oemedical.oemedical_vaccination
+msgid "Vaccination"
+msgstr "Cijepljenje"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+msgid "Oemedical Patient Evaluation"
+msgstr "Oemedical Patient Evaluation"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_patient_medication_view
+#: model:ir.ui.menu,name:oemedical.oemedical_patient_medication
+msgid "Patient Medication"
+msgstr "Tretmani / lijekovi klijenta"
+
+#. module: oemedical
+#: selection:oemedical.appointment,week_list:0
+msgid "Sunday"
+msgstr "Sunday"
+
+#. module: oemedical
+#: view:oemedical.pathology.group:0
+#: field:oemedical.pathology.group,info:0
+msgid "Detailed information"
+msgstr "Detaljne informacije"
+
+#. module: oemedical
+#: view:oemedical.signs_and_symptoms:0
+msgid "Oemedical Signs_And_Symptoms"
+msgstr "Oemedical Signs_And_Symptoms"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,mood:0
+msgid "Happy"
+msgstr "Sretan"
+
+#. module: oemedical
+#: view:oemedical.procedure:0
+#: field:oemedical.procedure,description:0
+msgid "Long Text"
+msgstr "Dugačak tekst"
+
+#. module: oemedical
+#: selection:oemedical.patient.disease,allergy_type:0
+msgid "Food Allergy"
+msgstr "Alergija na hranu"
+
+#. module: oemedical
+#: help:oemedical.medication.template,duration_period:0
+msgid "Period that the patient must take the medication in minutes, hours, days, months, years or indefinately"
+msgstr "Period that the patient must take the medication in minutes, hours, days, months, years or indefinately"
+
+#. module: oemedical
+#: selection:oemedical.appointment,week_list:0
+msgid "Friday"
+msgstr "Friday"
+
+#. module: oemedical
+#: field:oemedical.appointment,allday:0
+msgid "All Day"
+msgstr "All Day"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,reliable_info:0
+msgid "Uncheck this optionif the information provided by the source seems not reliable"
+msgstr "Odaberi opciju NE ako su informacije pružene od strane izvora nepouzdane"
+
+#. module: oemedical
+#: help:product.product,is_bed:0
+msgid "Check if the product is a bed on the gnuhealth.center"
+msgstr "Check if the product is a bed on the gnuhealth.center"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,chief_complaint:0
+#: help:oemedical.patient.evaluation,chief_complaint:0
+msgid "Chief Complaint"
+msgstr "Glavna žalba"
+
+#. module: oemedical
+#: view:oemedical.hospital.building:0
+#: field:oemedical.hospital.building,institution:0
+#: view:oemedical.hospital.or:0
+#: field:oemedical.hospital.or,institution:0
+#: view:oemedical.hospital.unit:0
+#: field:oemedical.hospital.unit,institution:0
+#: view:oemedical.hospital.ward:0
+#: field:oemedical.hospital.ward,institution:0
+#: view:oemedical.physician:0
+#: field:oemedical.physician,institution:0
+#: view:oemedical.vaccination:0
+#: field:oemedical.vaccination,institution:0
+#: field:res.partner,is_institution:0
+msgid "Institution"
+msgstr "Tvrtka"
+
+#. module: oemedical
+#: view:oemedical.hospital.or:0
+#: field:oemedical.hospital.or,building:0
+#: view:oemedical.hospital.ward:0
+#: field:oemedical.hospital.ward,building:0
+msgid "Building"
+msgstr "Zgrada"
+
+#. module: oemedical
+#: selection:oemedical.appointment,byday:0
+msgid "Last"
+msgstr "Last"
+
+#. module: oemedical
+#: selection:oemedical.medicament,pregnancy_category:0
+msgid "D"
+msgstr "D"
+
+#. module: oemedical
+#: selection:oemedical.medication.template,frequency_unit:0
+msgid "when required"
+msgstr "kada zatraži"
+
+#. module: oemedical
+#: view:oemedical.hospital.bed:0
+#: field:oemedical.hospital.bed,telephone_number:0
+msgid "Telephone Number"
+msgstr "Broj telefona"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,loc_eyes:0
+msgid "Opens eyes spontaneously"
+msgstr "Otvara oči spontano"
+
+#. module: oemedical
+#: selection:oemedical.patient,marital_status:0
+msgid "Married"
+msgstr "Vjenčan/a"
+
+#. module: oemedical
+#: view:oemedical.patient.disease:0
+msgid "Oemedical Patient Disease"
+msgstr "Oemedical Patient Disease"
+
+#. module: oemedical
+#: field:oemedical.patient,client_confirmation:0
+msgid "Confirmation of the clients information"
+msgstr "Potvrda klijenta o informiranosti"
+
+#. module: oemedical
+#: help:oemedical.medicament,composition:0
+msgid "Components"
+msgstr "Komponente"
+
+#. module: oemedical
+#: selection:oemedical.appointment,state:0
+msgid "Cancelled"
+msgstr "Cancelled"
+
+#. module: oemedical
+#: selection:oemedical.patient.disease,status:0
+msgid "acute"
+msgstr "acute"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_secondary_condition_view
+msgid "Secondary Condition"
+msgstr "Sekundarno stanje"
+
+#. module: oemedical
+#: view:oemedical.family_member:0
+msgid "Oemedical Family_Member"
+msgstr "Oemedical Family_Member"
+
+#. module: oemedical
+#: field:oemedical.patient,profession:0
+msgid "Profession"
+msgstr "Profession"
+
+#. module: oemedical
+#: help:oemedical.hospital.bed,ward:0
+msgid "Ward or room"
+msgstr "Odjel ili soba"
+
+#. module: oemedical
+#: help:oemedical.appointment,doctor:0
+msgid "Physician's Name"
+msgstr "Ime terapeuta"
+
+#. module: oemedical
+#: selection:oemedical.appointment,appointment_type:0
+#: selection:oemedical.patient.evaluation,evaluation_type:0
+msgid "Inpatient"
+msgstr "Inpatient"
+
+#. module: oemedical
+#: help:oemedical.patient.disease,date_start_treatment:0
+msgid "Start of treatment date"
+msgstr "Datum početka tretmana"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_signs_and_symptoms_view
+msgid "Signs And Symptoms"
+msgstr "Znakovi i simptomi"
+
+#. module: oemedical
+#: help:oemedical.medication.template,dose:0
+msgid "Amount of medication (eg, 250 mg) per dose"
+msgstr "Amount of medication (eg, 250 mg) per dose"
+
+#. module: oemedical
+#: constraint:res.users:0
+msgid "The chosen company is not in the allowed companies for this user"
+msgstr "Odabrana tvrtka nije među dozvoljenim tvrtkama za ovog korisnika"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,mood:0
+msgid "Fear"
+msgstr "Strah"
+
+#. module: oemedical
+#: selection:oemedical.appointment,state:0
+msgid "Confirmed"
+msgstr "Confirmed"
+
+#. module: oemedical
+#: view:oemedical.patient:0
+#: field:oemedical.patient,dod:0
+msgid "Date of Death"
+msgstr "Datum smrti"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+msgid "Confirm"
+msgstr "Confirm"
+
+#. module: oemedical
+#: selection:oemedical.hospital.bed,bed_type:0
+msgid "Gatch Bed"
+msgstr "Bolnički krevet"
+
+#. module: oemedical
+#: help:oemedical.insurance,plan_id:0
+#: help:oemedical.insurance.plan,name:0
+msgid "Insurance company plan"
+msgstr "Plan osiguravajuće tvrtke"
+
+#. module: oemedical
+#: help:oemedical.patient.disease,doctor:0
+msgid "Physician who treated or diagnosed the patient"
+msgstr "Physician who treated or diagnosed the patient"
+
+#. module: oemedical
+#: help:oemedical.pathology,code:0
+msgid "Specific Code for the Disease (eg, ICD-10)"
+msgstr "Specific Code for the Disease (eg, ICD-10)"
+
+#. module: oemedical
+#: view:oemedical.prescription.order:0
+#: field:oemedical.prescription.order,pharmacy:0
+#: field:res.partner,is_pharmacy:0
+msgid "Pharmacy"
+msgstr "Ljekarna"
+
+#. module: oemedical
+#: help:oemedical.patient.medication,is_active:0
+msgid "Check if the patient is currently taking the medication"
+msgstr "Klikni ako klijent trenutno koristi neki tretman / lijek"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_hospital_building_view
+#: model:ir.ui.menu,name:oemedical.oemedical_hospital_building
+msgid "Hospital Building"
+msgstr "Bolnička zgrada"
+
+#. module: oemedical
+#: view:oemedical.pathology:0
+#: field:oemedical.pathology,category:0
+msgid "Main Category"
+msgstr "Glavna kategorija"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,mood:0
+msgid "Sad"
+msgstr "Tužan"
+
+#. module: oemedical
+#: selection:oemedical.medication.template,duration_period:0
+msgid "indefinite"
+msgstr "neodređeno"
+
+#. module: oemedical
+#: view:oemedical.prescription.line:0
+#: field:oemedical.prescription.line,allow_substitution:0
+msgid "Allow substitution"
+msgstr "Dopusti zamjenu"
+
+#. module: oemedical
+#: view:oemedical.pathology.group:0
+msgid "Oemedical Pathology Group"
+msgstr "Oemedical Pathology Group"
+
+#. module: oemedical
+#: view:oemedical.hospital.bed:0
+msgid "Oemedical Hospital Bed"
+msgstr "Oemedical Hospital Bed"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,glycemia:0
+msgid "Glycemia"
+msgstr "Razina glikemije"
+
+#. module: oemedical
+#: view:oemedical.hospital.ward:0
+#: field:oemedical.hospital.ward,number_of_beds:0
+msgid "Number of beds"
+msgstr "Broj kreveta"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,object_recognition:0
+msgid "Check this box if the patient suffers from any sort of gnosia disorders, such as agnosia, prosopagnosia ..."
+msgstr "Check this box if the patient suffers from any sort of gnosia disorders, such as agnosia, prosopagnosia ..."
+
+#. module: oemedical
+#: selection:oemedical.appointment,appointment_type:0
+#: selection:oemedical.patient.evaluation,evaluation_type:0
+msgid "Ambulatory"
+msgstr "Ambulatory"
+
+#. module: oemedical
+#: view:oemedical.drug.form:0
+msgid "Oemedical Drug Form"
+msgstr "Obrazac lijeka tretmana"
+
+#. module: oemedical
+#: field:oemedical.hospital.ward,gender:0
+msgid "Gender"
+msgstr "Rod"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+msgid "Mail To"
+msgstr "Mail To"
+
+#. module: oemedical
+#: help:oemedical.family,name:0
+msgid "Family code within an operational sector"
+msgstr "Family code within an operational sector"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,judgment:0
+msgid "Jugdment"
+msgstr "Sposobnost prosuđivanja"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,bmi:0
+msgid "Body Mass Index"
+msgstr "Indeks tjelesne mase"
+
+#. module: oemedical
+#: view:oemedical.signs_and_symptoms:0
+#: field:oemedical.signs_and_symptoms,clinical_id:0
+msgid "Sign or Symptom"
+msgstr "Znak ili simptom"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_vaccination
+msgid "oemedical.vaccination"
+msgstr " "
+
+#. module: oemedical
+#: field:res.partner,is_school:0
+msgid "School"
+msgstr "Škola"
+
+#. module: oemedical
+#: help:oemedical.medication.template,medicament:0
+msgid "Prescribed Medicament"
+msgstr "Prescribed Medicament"
+
+#. module: oemedical
+#: view:oemedical.physician:0
+#: field:oemedical.physician,health_professional:0
+msgid "Health Professional"
+msgstr "Stručni naziv"
+
+#. module: oemedical
+#: selection:oemedical.patient,marital_status:0
+msgid "Divorced"
+msgstr "Razveden/a"
+
+#. module: oemedical
+#: selection:oemedical.medication.template,frequency_unit:0
+msgid "seconds"
+msgstr "sekunde"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,calculation_ability:0
+msgid "Calculation Ability"
+msgstr "Izračun sposobnosti"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,next_evaluation:0
+msgid "Next Appointment"
+msgstr "Sljedeći zakazani termin"
+
+#. module: oemedical
+#: help:oemedical.patient.medication,adverse_reaction:0
+msgid "Side effects or adverse reactions that the patient experienced"
+msgstr "Side effects or adverse reactions that the patient experienced"
+
+#. module: oemedical
+#: view:oemedical.hospital.ward:0
+#: field:oemedical.hospital.ward,guest_sofa:0
+msgid "Guest sofa-bed"
+msgstr "Krevet za gosta"
+
+#. module: oemedical
+#: help:oemedical.operational_area,name:0
+msgid "Operational Area of the city or region"
+msgstr "Operativni prostor grada ili regije"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_pathology_view
+#: model:ir.ui.menu,name:oemedical.oemedical_pathology
+#: view:oemedical.diagnostic_hypothesis:0
+#: field:oemedical.diagnostic_hypothesis,pathology_id:0
+#: view:oemedical.secondary_condition:0
+#: field:oemedical.secondary_condition,pathology_id:0
+msgid "Pathology"
+msgstr "Patologija"
+
+#. module: oemedical
+#: selection:oemedical.appointment,byday:0
+msgid "First"
+msgstr "First"
+
+#. module: oemedical
+#: view:oemedical.prescription.line:0
+#: field:oemedical.prescription.line,short_comment:0
+msgid "Comment"
+msgstr "Komentar"
+
+#. module: oemedical
+#: selection:oemedical.hospital.bed,bed_type:0
+msgid "Stretcher"
+msgstr "Nosila"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,weight:0
+msgid "Weight"
+msgstr "Težina"
+
+#. module: oemedical
+#: selection:oemedical.appointment,month_list:0
+msgid "December"
+msgstr "December"
+
+#. module: oemedical
+#: selection:oemedical.medication.template,duration_period:0
+msgid "months"
+msgstr "mjeseci"
+
+#. module: oemedical
+#: view:oemedical.occupation:0
+msgid "Oemedical Occupation"
+msgstr "Oemedical Occupation"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,hip:0
+msgid "Hip circumference in centimeters, eg 100"
+msgstr "Hip circumference in centimeters, eg 100"
+
+#. module: oemedical
+#: selection:oemedical.appointment,rrule_type:0
+msgid "Weekly"
+msgstr "Weekly"
+
+#. module: oemedical
+#: field:oemedical.appointment,urgency:0
+msgid "Urgency Level"
+msgstr "Razina prioriteta"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_insurance_plan_view
+#: model:ir.ui.menu,name:oemedical.oemedical_insurance_plan
+msgid "Insurance Plan"
+msgstr "Plan osiguranja"
+
+#. module: oemedical
+#: selection:oemedical.appointment,class:0
+#: view:oemedical.hospital.ward:0
+#: field:oemedical.hospital.ward,private:0
+#: selection:oemedical.insurance,insurance_type:0
+#: selection:res.partner,insurance_company_type:0
+msgid "Private"
+msgstr "Privatno"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_operational_area_view
+#: model:ir.ui.menu,name:oemedical.oemedical_operational_area
+#: view:oemedical.operational_sector:0
+#: field:oemedical.operational_sector,operational_area_id:0
+msgid "Operational Area"
+msgstr "Operativni prostor"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+msgid "Invitation Detail"
+msgstr "Invitation Detail"
+
+#. module: oemedical
+#: selection:oemedical.patient.disease,status:0
+msgid "chronic"
+msgstr "chronic"
+
+#. module: oemedical
+#: selection:oemedical.appointment,state:0
+msgid "Draft"
+msgstr "Draft"
+
+#. module: oemedical
+#: view:oemedical.prescription.order:0
+msgid "Oemedical Prescription Order"
+msgstr "Oemedical Prescription Order"
+
+#. module: oemedical
+#: view:oemedical.medication.template:0
+#: field:oemedical.medication.template,end_treatment:0
+#: view:oemedical.patient.disease:0
+#: field:oemedical.patient.disease,date_stop_treatment:0
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,evaluation_endtime:0
+msgid "End"
+msgstr "Završetak"
+
+#. module: oemedical
+#: view:oemedical.patient.medication:0
+#: field:oemedical.patient.medication,discontinued_reason:0
+msgid "Reason for discontinuation"
+msgstr "Razlog za prestanak"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,tag:0
+msgid "Triacylglycerol(triglicerides) level. Can be approximative"
+msgstr "Triacylglycerol(triglicerides) level. Can be approximative"
+
+#. module: oemedical
+#: help:oemedical.patient.disease,date_stop_treatment:0
+msgid "End of treatment date"
+msgstr "Završetak tretmana"
+
+#. module: oemedical
+#: selection:oemedical.appointment,urgency:0
+#: selection:oemedical.patient.evaluation,mood:0
+msgid "Normal"
+msgstr "Normalno"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_medication_dosage_view
+#: model:ir.ui.menu,name:oemedical.oemedical_medication_dosage
+msgid "Medication Dosage"
+msgstr "Doziranje tretmana / lijeka"
+
+#. module: oemedical
+#: field:oemedical.appointment,user_id:0
+msgid "User"
+msgstr "User"
+
+#. module: oemedical
+#: view:oemedical.medication.template:0
+#: field:oemedical.medication.template,admin_times:0
+msgid "Admin hours"
+msgstr "Administratorski sati"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_directions_view
+msgid "Directions"
+msgstr "Directions"
+
+#. module: oemedical
+#: selection:oemedical.appointment,month_list:0
+msgid "November"
+msgstr "November"
+
+#. module: oemedical
+#: view:oemedical.prescription.line:0
+#: field:oemedical.prescription.line,refills:0
+msgid "Refills #"
+msgstr "Broj nadopuna"
+
+#. module: oemedical
+#: view:oemedical.procedure:0
+msgid "Oemedical Procedure"
+msgstr "Oemedical Procedure"
+
+#. module: oemedical
+#: view:oemedical.insurance.plan:0
+msgid "Oemedical Insurance Plan"
+msgstr "Oemedical Insurance Plan"
+
+#. module: oemedical
+#: selection:oemedical.hospital.ward,state:0
+msgid "Beds available"
+msgstr "Dostupnost kreveta"
+
+#. module: oemedical
+#: selection:oemedical.appointment,month_list:0
+msgid "January"
+msgstr "January"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_patient_medication
+msgid "oemedical.patient.medication"
+msgstr " "
+
+#. module: oemedical
+#: field:oemedical.appointment,th:0
+msgid "Thu"
+msgstr "Thu"
+
+#. module: oemedical
+#: view:oemedical.patient:0
+#: field:oemedical.patient,critical_info:0
+msgid "Important disease, allergy or procedures information"
+msgstr "Bolesti / alergije"
+
+#. module: oemedical
+#: help:oemedical.patient.disease,age:0
+msgid "Patient age at the moment of the diagnosis. Can be estimative"
+msgstr "Patient age at the moment of the diagnosis. Can be estimative"
+
+#. module: oemedical
+#: view:oemedical.hospital.ward:0
+#: field:oemedical.hospital.ward,private_bathroom:0
+msgid "Private Bathroom"
+msgstr "Privatna kupaonica"
+
+#. module: oemedical
+#: help:res.partner,alias:0
+msgid "Common name that the Party is reffered"
+msgstr "Common name that the Party is reffered"
+
+#. module: oemedical
+#: view:oemedical.prescription.order:0
+#: field:oemedical.prescription.order,prescription_date:0
+msgid "Prescription Date"
+msgstr "Datum recepta"
+
+#. module: oemedical
+#: field:oemedical.patient,partner_id:0
+msgid "Related Partner"
+msgstr "Povezani partner"
+
+#. module: oemedical
+#: view:oemedical.patient.disease:0
+#: field:oemedical.patient.disease,is_allergy:0
+msgid "Allergic Disease"
+msgstr "Alergijske bolesti"
+
+#. module: oemedical
+#: help:oemedical.patient,partner_id:0
+msgid "Partner-related data of the patient"
+msgstr "Partner-related data of the patient"
+
+#. module: oemedical
+#: field:oemedical.appointment,sequence:0
+msgid "Sequence"
+msgstr "Sequence"
+
+#. module: oemedical
+#: view:oemedical.vaccination:0
+#: field:oemedical.vaccination,vaccine_lot:0
+msgid "Lot Number"
+msgstr "Broj sa kutije cjepiva"
+
+#. module: oemedical
+#: view:oemedical.patient:0
+#: field:oemedical.patient,general_info:0
+msgid "General Information"
+msgstr "Ostale napomene"
+
+#. module: oemedical
+#: selection:oemedical.appointment,select1:0
+msgid "Day of month"
+msgstr "Day of month"
+
+#. module: oemedical
+#: view:oemedical.pathology:0
+#: field:oemedical.pathology,chromosome:0
+msgid "Affected Chromosome"
+msgstr "Zahvaćeni kromosom"
+
+#. module: oemedical
+#: help:oemedical.medicament,pregnancy:0
+msgid "Warnings for Pregnant Women"
+msgstr "Upozorenje za trudnice"
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_insurance_view
+#: model:ir.ui.menu,name:oemedical.oemedical_insurance
+#: view:oemedical.patient:0
+#: field:oemedical.patient,current_insurance:0
+msgid "Insurance"
+msgstr "Osiguranje"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,memory:0
+msgid "Check this box if the patient has problems in short or long term memory"
+msgstr "Check this box if the patient has problems in short or long term memory"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_physician
+msgid "oemedical.physician"
+msgstr " "
+
+#. module: oemedical
+#: constraint:oemedical.medicament.category:0
+#: constraint:oemedical.pathology.category:0
+msgid ""
+"Error ! You cannot create recursive \n"
+"Category."
+msgstr ""
+"Error ! You cannot create recursive \n"
+"Category."
+
+#. module: oemedical
+#: field:oemedical.appointment,rrule_type:0
+msgid "Recurrency"
+msgstr "Recurrency"
+
+#. module: oemedical
+#: selection:oemedical.appointment,week_list:0
+msgid "Thursday"
+msgstr "Thursday"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_appointment
+msgid "oemedical.appointment"
+msgstr " "
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+msgid "To"
+msgstr "To"
+
+#. module: oemedical
+#: view:oemedical.vaccination:0
+#: field:oemedical.vaccination,observations:0
+msgid "Observations"
+msgstr "Promatranja"
+
+#. module: oemedical
+#: help:oemedical.pathology,chromosome:0
+msgid "chromosome number"
+msgstr "chromosome number"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,memory:0
+msgid "Memory"
+msgstr "Pamćenje"
+
+#. module: oemedical
+#: view:oemedical.pathology.group:0
+#: field:oemedical.pathology.group,desc:0
+msgid "Short Description"
+msgstr "Kratki opis"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+msgid "Uncertain"
+msgstr "Uncertain"
+
+#. module: oemedical
+#: view:oemedical.medicament:0
+#: field:oemedical.medicament,presentation:0
+msgid "Presentation"
+msgstr "Prezentacija"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_family_member
+msgid "oemedical.family_member"
+msgstr " "
+
+#. module: oemedical
+#: field:oemedical.appointment,description:0
+#: view:oemedical.dose.unit:0
+#: field:oemedical.dose.unit,desc:0
+msgid "Description"
+msgstr "opis"
+
+#. module: oemedical
+#: selection:oemedical.appointment,month_list:0
+msgid "May"
+msgstr "May"
+
+#. module: oemedical
+#: selection:oemedical.appointment,byday:0
+msgid "Second"
+msgstr "Second"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,loc_verbal:0
+msgid "Oriented, converses normally"
+msgstr "Oriented, converses normally"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_prescription_order
+msgid "oemedical.prescription.order"
+msgstr " "
+
+#. module: oemedical
+#: model:ir.actions.act_window,name:oemedical.act_open_oemedical_medicament_view
+#: model:ir.ui.menu,name:oemedical.oemedical_medicament
+#: view:oemedical.medication.template:0
+#: field:oemedical.medication.template,medicament:0
+#: field:product.product,is_medicament:0
+msgid "Medicament"
+msgstr "Tretman / lijek"
+
+#. module: oemedical
+#: field:oemedical.patient.evaluation,actions:0
+msgid "Procedures"
+msgstr "Precedure"
+
+#. module: oemedical
+#: selection:oemedical.hospital.ward,gender:0
+msgid "Women Ward"
+msgstr "Ženski odjel"
+
+#. module: oemedical
+#: selection:oemedical.appointment,month_list:0
+msgid "February"
+msgstr "February"
+
+#. module: oemedical
+#: selection:oemedical.patient,blood_type:0
+msgid "AB"
+msgstr "AB"
+
+#. module: oemedical
+#: field:oemedical.appointment,exdate:0
+msgid "Exception Date/Times"
+msgstr "Exception Date/Times"
+
+#. module: oemedical
+#: field:oemedical.patient,photo:0
+msgid "Picture"
+msgstr "Slika"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,knowledge_current_events:0
+msgid "Knowledge of Current Events"
+msgstr "Svjesnost trenutne situacije"
+
+#. module: oemedical
+#: selection:oemedical.patient.evaluation,loc_motor:0
+msgid "Localizes painful stimuli"
+msgstr "Localizes painful stimuli"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_drug_form
+msgid "oemedical.drug.form"
+msgstr " "
+
+#. module: oemedical
+#: selection:oemedical.appointment,month_list:0
+msgid "April"
+msgstr "April"
+
+#. module: oemedical
+#: field:oemedical.appointment,attendee_ids:0
+msgid "Attendees"
+msgstr "Attendees"
+
+#. module: oemedical
+#: help:oemedical.physician,specialty:0
+msgid "Specialty Code"
+msgstr "Šifra specijalizacije"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,malnutrition:0
+msgid "Malnutrition"
+msgstr "Pothranjenost"
+
+#. module: oemedical
+#: view:oemedical.patient.evaluation:0
+#: field:oemedical.patient.evaluation,systolic:0
+msgid "Systolic Pressure"
+msgstr "Sistolički tlak"
+
+#. module: oemedical
+#: help:oemedical.pathology.group,code:0
+msgid "for example MDG6 code will contain the Millennium Development Goals # 6 diseases : Tuberculosis, Malaria and HIV/AIDS"
+msgstr "for example MDG6 code will contain the Millennium Development Goals # 6 diseases : Tuberculosis, Malaria and HIV/AIDS"
+
+#. module: oemedical
+#: field:oemedical.appointment,select1:0
+msgid "Option"
+msgstr "Option"
+
+#. module: oemedical
+#: help:oemedical.hospital.unit,name:0
+msgid "Name of the unit, eg Neonatal, Intensive Care, ..."
+msgstr "Name of the unit, eg Neonatal, Intensive Care, ..."
+
+#. module: oemedical
+#: field:res.partner,is_person:0
+msgid "Person"
+msgstr "Osoba"
+
+#. module: oemedical
+#: help:oemedical.medication.template,frequency:0
+msgid "Time in between doses the patient must wait (ie, for 1 pill each 8 hours, put here 8 and select \"hours\" in the unit field"
+msgstr "Time in between doses the patient must wait (ie, for 1 pill each 8 hours, put here 8 and select \"hours\" in the unit field"
+
+#. module: oemedical
+#: help:oemedical.patient.evaluation,judgment:0
+msgid "Check this box if the patient can not interpret basic scenario solutions"
+msgstr "Check this box if the patient can not interpret basic scenario solutions"
+
+#. module: oemedical
+#: view:oemedical.appointment:0
+msgid "Accept"
+msgstr "Accept"
+
+#. module: oemedical
+#: view:oemedical.patient.disease:0
+#: field:oemedical.patient.disease,healed_date:0
+msgid "Healed"
+msgstr "Izliječen"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_dose_unit
+msgid "oemedical.dose.unit"
+msgstr " "
+
+#. module: oemedical
+#: view:oemedical.hospital.ward:0
+msgid "Oemedical Hospital Ward"
+msgstr "Oemedical Hospital Ward"
+
+#. module: oemedical
+#: view:oemedical.prescription.line:0
+msgid "Oemedical Prescription Line"
+msgstr "Oemedical Prescription Line"
+
+#. module: oemedical
+#: model:ir.model,name:oemedical.model_oemedical_occupation
+msgid "oemedical.occupation"
+msgstr " "
+

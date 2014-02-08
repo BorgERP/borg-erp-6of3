@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        
+        <record id="view_res_partner_form" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="priority" eval="1" />
+            <field name="arch" type="xml">
+            	
+            	<xpath expr="/form/notebook/page/field[@name='active']" position="replace"/>
+            	<field name="lang" position="after">
+            		<field name="active" />
+            	</field>
+                <notebook position="inside">
+                    <page string="OeMedical">
+                        <group colspan="4" col="6">
+                            <!--field name="insurance_plan_ids"/ -->
+                            <field name="is_insurance_company" />
+                            <field name="relationship" />
+                            <!--field name="insurance_company_type"/ -->
+                            <field name="is_institution" />
+                            <field name="relative_id" />
+                            <field name="is_doctor" />
+                            <field name="is_patient" />
+                            <field name="alias" />
+                            <field name="internal_user" />
+                            <field name="activation_date" />
+                            <field name="lastname" />
+                            <field name="is_work" />
+                            <field name="is_person" />
+                            <field name="is_school" />
+                            <field name="is_pharmacy" />
+                            <!--field name="insurance"/ -->
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+        
+        <record id="inherti_view_res_partner_filter" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+            	<filter string="Suppliers" name="supplier" icon="terp-personal" domain="[('supplier','=',1)]" help="Supplier Partners" position="after">
+            		<filter string="Patient" name="is_patient" icon="terp-personal" domain="[('is_patient','=',1)]" help="Patients"/>
+            	</filter>
+            	
+            	
+            </field>
+       	</record>
+		<record id="view_res_users_form" model="ir.ui.view">
+            <field name="name">res.users.form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <field name="active" position="after">
+                	<field name="is_doctor" />
+                </field>          
+            </field>
+        </record>
+    </data>
+</openerp>

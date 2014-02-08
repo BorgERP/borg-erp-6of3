@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="base.res_currency_rate_wizard_form" model="ir.ui.view" >
+			<field name="name">res.currency.rate.wizard.form</field>
+			<field name="model">res.currency.rate.wizard</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Currency rate update wizard">
+					<separator colspan="4" string="Date range" />
+					<field name="date_start" />
+					<field name="date_end" />
+					<separator colspan="4" string="Services to update" />
+					<!--field name="company_id" widget='selection' on_change="onchange_company_id(company_id)" /-->
+					<newline />
+                    <!--field name="service_ids" domain="[('company_id','=',company_id)]" colspan="4" nolabel="1" /-->
+                    <field name="service_ids" colspan="4" nolabel="1" />
+                    <separator colspan="4" />
+                    <group colspan="4" col="2">
+	                    <button string="_Cancel" name="action_cancel" icon="gtk-cancel" special="cancel" />
+	                   	<button string="Update" name="update_currencies" type="object"  icon="gtk-ok" />
+	                </group>
+				</form>
+			</field>
+		</record>
+
+ 		<record id="base.action_res_currency_rate_wizard" model="ir.actions.act_window" >
+            <field name="name">Update currency rate</field>
+            <field name="res_model">res.currency.rate.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="base.res_currency_rate_wizard_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="base.menu_res_currency_rate_wizard_sys"
+            icon="STOCK_EXECUTE"
+            name="Update currency rate"
+            action="base.action_res_currency_rate_wizard"
+            parent="base.menu_currency_sys"
+            groups="base.group_extended"
+            sequence="27"/>
+
+<!-- TODO account.menu_configuration_misc"
+        <menuitem id="menu_res_currency_rate_wizard"
+            icon="STOCK_EXECUTE"
+            name="Update currency rate"
+            action="action_res_currency_rate_wizard"
+            parent="base.menu_res_company_global"
+            groups="base.group_extended"
+            sequence="27"/-->
+	</data>
+</openerp>
